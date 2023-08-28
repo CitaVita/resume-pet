@@ -29,6 +29,20 @@
 
               <br>
 
+
+       <div>
+      
+                {{#if company.url}} 
+                {{> link href=company.url blank=true noLine=true company.url=null}}
+                {{else}}
+            <b>{{company.name}}</b>
+                 {{/if}}
+                 </div>
+
+
+
+
+
                   <div>{{> link text=company.name href=company.url blank=true noLine=true }}</div>
               <br>
               <br>
@@ -40,7 +54,7 @@
               <br>
              
               <ul>
-                {{#each projects}}
+                {{#each project}}
                 <li>
      
                   <div>{{> link text=name href=url blank=true noLine=true }}</div>
@@ -61,7 +75,7 @@
                   <ul> 
                    {{#each stacks}}
                    <li>
-                  {{this}}
+                  {{name}}
                   </li>
                    {{/each}}
                    </ul>
@@ -77,7 +91,7 @@
                   <ul>
                   {{#each awards}}
                   <li>
-                    {{this}}
+                    {{name}}
                     </li>
                 {{/each}}
                   </ul>
