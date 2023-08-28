@@ -19,6 +19,7 @@ var footer = {
   email: { 
     text: 'luchia1111@gmail.com',
     href: 'mailto:luchia1111@gmail.com',
+    
   },
   phone: {
     text: '+447735891550',
@@ -275,12 +276,16 @@ res.render ('work', {
         to: null,
       },
       projectAmount: 3,
+     
+      awardAmount: 7,
 
       project: [
         {
         name: 'Resume',
         url: 'https://it-brains.com.ua/',
         about: 'Airbnb competitor. High-load for searching apartments',
+        stackAmount: 5,
+        awardAmount: 7,
         stacks: [
           {
             name: 'React.js',
@@ -294,17 +299,17 @@ res.render ('work', {
         ],
         awards: [
           {
-            name: 'firs place'
+            name: 'Grammy'
         },
         {
-          name: 'second place',
+          name: 'Pulitzer Prize',
         },
-     ],       
+        ],
+    },  
+        ],
+      } 
+        ],    
     },
-  ],
-},
-    ],
-},
 
  footer,
 })

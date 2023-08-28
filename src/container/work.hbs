@@ -28,22 +28,14 @@
                  </div>
 
               <br>
-
-
        <div>
-      
                 {{#if company.url}} 
-                {{> link href=company.url blank=true noLine=true company.url=null}}
+                {{> link href=company.url blank=true noLine=true text=company.name}}
                 {{else}}
             <b>{{company.name}}</b>
                  {{/if}}
                  </div>
-
-
-
-
-
-                  <div>{{> link text=company.name href=company.url blank=true noLine=true }}</div>
+                 
               <br>
               <br>
 
@@ -69,7 +61,7 @@
                   <br>
 
                   <div>
-                    <em>Project stacks</em>
+                    <em>Project stacks ({{stackAmount}}) </em>
                   </div>
 
                   <ul> 
@@ -83,7 +75,7 @@
                   <br>
 
                   <div>
-                    <em>Project awards</em>
+                    <em>Project awards ({{awardAmount}})</em>
                   </div>
 
                   <br>
