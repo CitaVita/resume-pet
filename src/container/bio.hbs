@@ -1,3 +1,272 @@
 <div>
-	in progress...
+
+<div>
+  <em><b>Name:</b></em>
+    <i>Albert Einstein</i>
 </div>
+<br>
+<div>
+   <em><b>Birth Date:</b></em>
+    <i>March 14, 1879</i>
+</div>
+<br>
+<div>
+   <em><b>Birth Place:</b></em>
+    <i>Ulm, Kingdom of Württemberg, German Empire</i>
+</div>
+<br>
+<div>
+    <em><b>Death Date:</b></em>
+    <i>April 18, 1955</i>
+</div>
+<br>
+<div>
+   <em><b>Death Place:</b></em>
+   <i>Princeton, New Jersey, United States</i>
+</div>
+<br>
+<div>
+   <em><b>Nationality:</b></em>
+   <i>Swiss, German, American</i>
+</div>
+<br>
+
+<div>
+   <em><b>Ocupation:</b></em>
+   <i>Theoretical Physicist</i>
+</div>
+<br>
+<br>
+<hr/>
+<br>
+<details>
+
+ <summary>Click to read more</summary>
+
+
+<div>
+    <p style="color: #546E7A;"><em><b>Known for:</p></b></em>
+</div>
+<div>
+    {{#each known_for}}
+    <li>
+        <i>{{this}}</i>
+    </li>
+    {{/each}}
+
+</div>
+<br>
+<br>
+<hr/>
+<br>
+    <div>
+        {{#each education}}
+
+        <p style="color: #546E7A;"><em><b>Education:</p></b></em>
+           <div>
+              <em><b>Degree:</b></em> 
+               <i>{{degree}}</i> 
+            </div>
+            <div>
+                <em><b>Field:</b></em> 
+               <i>{{field}}</i> 
+            </div>
+
+            <div>
+                <em><b>Institution:</b></em>
+                <i>{{institution}}</i>
+            </div>
+
+            <div>
+                <em><b>Year:</b></em>
+                 <i>{{year}}</i>
+            </div>   
+{{/each}}
+</div>
+
+<br>
+<br>
+<hr/>
+<br>
+<div>
+
+            <p style="color: #546E7A;"><em><b>Notable Publications:</p></b></em>
+            {{#each notable_publications}}
+           <div>
+              <em><b>Title:</b></em> 
+               <i>{{title}}</i> 
+            </div>
+
+            <div>
+                <em><b>Year:</b></em> 
+               <i>{{year}}</i> 
+            </div>
+
+            <div>
+                <em><b>Publisher:</b></em>
+                <i>{{publisher}}</i>
+            </div> 
+            {{/each}}
+            </div>
+<br>
+<br>
+<hr/>
+<br>
+<div>
+    
+               <p style="color: #546E7A;"><em><b>Partners:</p></b></em>
+               {{#each partners}}
+           <div>
+              <em><b> Name:</b></em> 
+               <i>{{name}}</i> 
+            </div>
+
+            <div>
+                <em><b>Relationship:</b></em> 
+               <i>{{relationship}}</i> 
+            </div>
+
+            <div>
+                <em><b>Years:</b></em>
+                <i>{{years}}</i>
+            </div> 
+        {{/each}}
+    </div>
+    <div>
+        <br>
+        <br>
+        <hr/>
+        <br>
+{{#each awards}}
+               <p style="color: #546E7A;"><em><b>Awards:</p></b></em>
+           <div>
+              <em><b> Title:</b></em> 
+               <i>{{title}}</i> 
+            </div>
+
+            <div>
+                <em><b>Year:</b></em> 
+               <i>{{year}}</i> 
+            </div>
+
+            <div>
+                <em><b>Deskription:</b></em>
+                <q><i>{{description}}</i></q>
+            </div> 
+{{/each}}
+</div>
+<br>
+<br>
+<hr/>
+<br>
+<div>
+    <p style="color: #546E7A;"><em><b>Influences:</p></b></em>
+</div>
+<div>
+    {{#each influences}}
+    <li>
+       <i>{{this}}</i>
+    </li>
+    {{/each}}
+</div>
+<br>
+<br>
+<hr/>
+<br>
+<div>
+    
+    <p style="color:#546E7A;"><em><b>Influenced:</b></em></p>
+</div>
+<div>
+    {{#each influenced}}
+    <li>
+        <i>{{this}}</i>
+</li>
+{{/each}}
+</div>
+
+<br>
+<br>
+<hr/>
+<br>
+<div>
+    <p style="color:#546E7A;"><em><b>Quotes:</b></em></p>
+</div>
+{{#each quotes}}
+<li>
+    <i>{{this}}</i>
+</li>
+{{/each}}
+</div>
+
+<br>
+<br>
+<hr/>
+<br>
+<div>
+      {{#each major_discoveries }}
+    <p style="color:#546E7A;"><em><b>Major Discoveries:</b></em></p>
+</div>
+<div>
+    <em><b>Title:</b></em>
+    <i>{{title}}</i>
+</div>
+
+<div>
+    <em><b>Year:</b></em>
+    <i>{{year}}</i>
+</div>
+
+<div>
+    <em><b>Description:</b></em>
+   <q><i>{{description}}</i></q> 
+</div>
+{{/each}}
+</div>
+<br>
+<br>
+<hr/>
+<br>
+
+   <div>
+    <p style="color:#546E7A;"><em><b>Contributions:</b></em></p>
+     {{#with contributions}}
+<div>
+    <em><b>Title:</b></em>
+    <i>{{title}}</i>
+</div>
+
+<div>
+    <em><b>Description:</b></em>
+    <i>{{description}}</i>
+</div>
+
+<div>
+    <em><b>Year:</b></em>
+    <i>{{year}}</i>
+</div>
+
+<div>
+    <em><b>Field:</b></em>
+    <i>{{field}}</i>
+</div>
+{{/with}}
+</div>
+</div>
+<br>
+<br>
+<hr/>
+<br>
+
+
+
+<form><fieldset>
+<legend>Was this article helpful?</legend>
+Yes <input name="yes" type="radio" value="yes" />
+
+No <input name="no" type="radio" value="no" />
+</fieldset>
+</form>
+
+</div>
+</details>
