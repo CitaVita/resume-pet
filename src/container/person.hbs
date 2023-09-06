@@ -47,8 +47,6 @@
 {{/with}}
 </div>
 
-
-{{/with}}
 </div>
 </p>
 <br>
@@ -108,6 +106,9 @@
             </em>
          </b>
     </ul>
+    </div>
+    <div>
+         {{#each workExperience}}
             <em>Company:</em>
         <a>{{company}}</a>
     </div>
@@ -140,12 +141,15 @@
          </b>
     </ul>
 <br>
-    <q>Developed new features for Google Maps</q>
-<br>
-    <q>Worked on improving search algorithms</q>
+<div>
+    {{#each responsibilities}}
+    <q>{{this}}</q>
+    <br>
+    {{/each}}
 </div>
 
 <div>
+    
     <em>Year founded:</em>
     <a>{{year_founded}}</a>
 </div>
@@ -154,7 +158,8 @@
     <em> Industry:</em>
     <a>{{industry}}</a>
 </div>
-
+{{/each}}
+</div>
 <br>
 <br>
 
@@ -168,14 +173,22 @@
         </b>
     </ul>
 <br>
+<div>
+     {{#each employees}}
     <em>Name:</em>
     <a>{{name}}</a>
+</div>
 <br>
-    <em>Position:</em>
+<div> <em>Position:</em>
     <a>{{position}}</a>
+</div>
+   
 <br>
+<div>
     <em>Department:</em>
-    <a>{{ department}}</a>
+    <a>{{department}}</a>
+</div>
+    {{/each}}
 </div>
 
 <br>
@@ -191,14 +204,20 @@
         </b>
     </ul>
 <br>
+<div> 
+    {{#each projects}}
     <em>Name:</em>
     <a>{{name}}</a>
+</div>
+   
 <br>
     <em>Description:</em>
     <q><a>{{description}}</a></q>
 <br>
     <em>Status:</em>
     <a>{{status}}</a>
+</div>
+{{/each}}
 </div>
 
 <br>
@@ -214,8 +233,12 @@
         </b>
     </ul>
 <br>
+<div> 
+    {{#each teams}}
     <em>Team name:</em>
     <a>{{team_name}}</a>
+</div>
+   
 <br>
     <em>Team leader:</em>
     <a>{{team_leader}}</a>
@@ -229,6 +252,8 @@
 <br>
     <em>Email:</em>
     <a>{{email}}</a>
+</div>
+{{/each}}
 </div>
 
 <br>
@@ -244,8 +269,12 @@
         </b>
     </ul>  
 <br>
-    <em>Name:</em>
+<div>
+     {{#each team_members}}
+     <em>Name:</em>
     <a>{{name}}</a>
+</div>
+   
 <br>
     <em>Title:</em>
     <a>{{title}}</a>
@@ -256,7 +285,8 @@
     <em>Skills:</em>
     <a>{{skills}}</a>
 </div>
-
+{{/each}}
+</div>
 <br>
 <br>
 
@@ -270,15 +300,18 @@
         </b>
     </ul>
 <br>
+<div>
+    {{#each projects}}
     <em>Name:</em>
     <a>{{name}}</a>
+</div>
    
 <br>
     <em>Description:</em>
     <q><a>{{description}}</a></q>
 <br>
     <em>Technologies:</em>
-    <a>{{technologies}}</a>
+    <a>{{this}}</a>
 </div>
 
 <br>
@@ -294,17 +327,30 @@
         </b>
     </ul>
 <br>
+<div>
+    {{#each team_members}}
     <em>Name:</em>
     <a>{{name}}</a>
+</div>
 <br>
+<div>
     <em>Title:</em>
     <a>{{title}}</a>
+</div>
+    
 <br>
-    <em>Name:</em>
+<div>
+     <em>Name:</em>
     <a>{{name}}</a>
+</div>
+   
 <br>
-    <em>Title:</em>
+<div>
+     <em>Title:</em>
     <a>{{title}}</a>
+</div>
+   {{/each}}
+   </div>
 <br>
 </div>
    </section>
@@ -312,7 +358,7 @@
         </details>
         <br>
 <hr/>
-
+{{/with}}
 
   
 
