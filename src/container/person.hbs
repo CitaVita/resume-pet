@@ -70,29 +70,33 @@
                     <p style="color:#029B40;"><u>Education:</u></p>
                 </em>
             </b>
-        </ul>
+       </ul>
     </div>
-
+ 
     <div>
+        {{#each education}}
         <em>Degree:</em>
-        <a>Bachelor of Science</a>
+        <a>{{degree}}</a>
     </div>
     
     <div>
-      </li><em>Major:</em>
-      <a>Computer Science</a>
+      <em>Major:</em>
+      <a>{{major}}</a>
     </div>
 
     <div>
       <em>University:</em>
-      <a>Massachusetts Institute of Technology</a>
+      <a>{{university}}</a>
     </div>
 
     <div>
-      <em>Graduation Year::</em>
-      <a>2012</a>
-      </li>
+      <em>Graduation Year:</em>
+      <a>{{graduationYear}}</a>
+      
+      </div>
+      {{/each}}
     </div>
+
 <br>
 <br>
     <div>
@@ -105,22 +109,22 @@
          </b>
     </ul>
             <em>Company:</em>
-        <a>Google</a>
+        <a>{{company}}</a>
     </div>
 
  <div>
      <em> Title:</em>
-        <a>Software Engineer</a>
+        <a>{{title}}</a>
     </div>
 
 <div>
     <em>Duration:</em>
     <br>
         <em> from:</em>
-        <a>2012-06-0</a>
+        <a>{{startDate}}</a>
     <br>
          <em>to:</em>
-        <a>2016-12-31</a>
+        <a>{{endDate}}</a>
 </div>
 
 <br>
@@ -143,12 +147,12 @@
 
 <div>
     <em>Year founded:</em>
-    <a>1990</a>
+    <a>{{year_founded}}</a>
 </div>
 
 <div>
     <em> Industry:</em>
-    <a>Technology</a>
+    <a>{{industry}}</a>
 </div>
 
 <br>
@@ -165,13 +169,13 @@
     </ul>
 <br>
     <em>Name:</em>
-    <a>John Smith</a>
+    <a>{{name}}</a>
 <br>
     <em>Position:</em>
-    <a>CEO</a>
+    <a>{{position}}</a>
 <br>
     <em>Department:</em>
-    <a>Executive</a>
+    <a>{{ department}}</a>
 </div>
 
 <br>
@@ -188,13 +192,13 @@
     </ul>
 <br>
     <em>Name:</em>
-    <a>Project Alpha</a>
+    <a>{{name}}</a>
 <br>
     <em>Description:</em>
-    <q><a>Developing new software platform</a></q>
+    <q><a>{{description}}</a></q>
 <br>
     <em>Status:</em>
-    <a>In Progress</a>
+    <a>{{status}}</a>
 </div>
 
 <br>
@@ -211,16 +215,20 @@
     </ul>
 <br>
     <em>Team name:</em>
-    <a>Awesome Team</a>
+    <a>{{team_name}}</a>
 <br>
     <em>Team leader:</em>
-    <a>John Smith</a>
+    <a>{{team_leader}}</a>
+<br>
+<br>
+    <em>Name:</em>
+    <a>{{name}}</a>
 <br>
     <em>Title:</em>
-    <a>Team Leader</a>
+    <a>{{ title}}</a>
 <br>
     <em>Email:</em>
-    <a>john.smith@example.com</a>
+    <a>{{email}}</a>
 </div>
 
 <br>
@@ -237,16 +245,16 @@
     </ul>  
 <br>
     <em>Name:</em>
-    <a>Alice Johnson</a>
+    <a>{{name}}</a>
 <br>
     <em>Title:</em>
-    <a>Software Engineer</a>
+    <a>{{title}}</a>
 <br>
     <em>Email:</em>
-    <a>alice.johnson@example.com</a>
+    <a>{{email}}</a>
 <br>
     <em>Skills:</em>
-    <a>Java, Python, SQL</a>
+    <a>{{skills}}</a>
 </div>
 
 <br>
@@ -263,13 +271,14 @@
     </ul>
 <br>
     <em>Name:</em>
-    <a>Project A</a>
+    <a>{{name}}</a>
+   
 <br>
     <em>Description:</em>
-    <q><a>Lorem ipsum dolor sit ameteo</a></q>
+    <q><a>{{description}}</a></q>
 <br>
     <em>Technologies:</em>
-    <a>Java, Spring Framework</a>
+    <a>{{technologies}}</a>
 </div>
 
 <br>
@@ -286,16 +295,16 @@
     </ul>
 <br>
     <em>Name:</em>
-    <a>Bob Lee</a>
+    <a>{{name}}</a>
 <br>
     <em>Title:</em>
-    <a>Software Engineer</a>
+    <a>{{title}}</a>
 <br>
     <em>Name:</em>
-    <a>Cindy Chen</a>
+    <a>{{name}}</a>
 <br>
     <em>Title:</em>
-    <a>UI Designer</a>
+    <a>{{title}}</a>
 <br>
 </div>
    </section>
