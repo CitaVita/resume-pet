@@ -204,15 +204,20 @@
     <em>Name:</em>
     <a>{{name}}</a>
 </div>
-   <div> <em>Description:</em>
+
+<div> 
+    <em>Description:</em>
     <q><a>{{description}}</a></q>
-    </div>
+</div>
    
-   <div><em>Status:</em>
+<div>
+    <em>Status:</em>
     <a>{{status}}</a>  
 </div>
+
 <br>
 <br>
+
 <div>
     <a>❍</a>
     <ul>
@@ -230,6 +235,7 @@
 </div>
 
 <div>
+    {{#with team_leader}}
     <em>Team leader:</em>
     <a>{{team_leader}}</a>
 </div>
@@ -248,7 +254,7 @@
     <em>Email:</em>
     <a>{{email}}</a>
 </div>
-    {{/each}}
+    {{/with}}
 </div>
 
 <br>
@@ -279,9 +285,10 @@
     <em>Email:</em>
     <a>{{email}}</a>
 </div>
-    <div>
+
+<div>
     <em>Skills:</em>
-    {{#each skills }}
+    {{#each skills}}
     <a>{{this}}</a>
     <br>
 {{/each}}
@@ -351,13 +358,6 @@
      <em>Title:</em>
     <a>{{title}}</a>
 </div>
-
-<br>
-</div>
-   </section>
-        </p>
-        </details>
-        <br>
 <hr/>
 {{/each}}
 </div>
@@ -365,6 +365,19 @@
 </div>
 {{/each}}
 </div>
+{{/each}}
+</div>
+{{/each}}
+</div>
+{{/each}}
+</div>
+<br>
+</div>
+   </section>
+        </p>
+        </details>
+        <br>
+
 {{/with}}
 
   
