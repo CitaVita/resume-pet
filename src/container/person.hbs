@@ -158,7 +158,6 @@
     <em> Industry:</em>
     <a>{{industry}}</a>
 </div>
-{{/each}}
 </div>
 <br>
 <br>
@@ -178,17 +177,13 @@
     <em>Name:</em>
     <a>{{name}}</a>
 </div>
-<br>
-<div> <em>Position:</em>
+<div> 
+    <em>Position:</em>
     <a>{{position}}</a>
 </div>
-   
-<br>
 <div>
     <em>Department:</em>
     <a>{{department}}</a>
-</div>
-    {{/each}}
 </div>
 
 <br>
@@ -209,20 +204,15 @@
     <em>Name:</em>
     <a>{{name}}</a>
 </div>
-   
-<br>
-    <em>Description:</em>
+   <div> <em>Description:</em>
     <q><a>{{description}}</a></q>
-<br>
-    <em>Status:</em>
-    <a>{{status}}</a>
+    </div>
+   
+   <div><em>Status:</em>
+    <a>{{status}}</a>  
 </div>
-{{/each}}
-</div>
-
 <br>
 <br>
-
 <div>
     <a>❍</a>
     <ul>
@@ -238,22 +228,27 @@
     <em>Team name:</em>
     <a>{{team_name}}</a>
 </div>
-   
-<br>
+
+<div>
     <em>Team leader:</em>
     <a>{{team_leader}}</a>
-<br>
-<br>
+</div>
+    
+<div>
     <em>Name:</em>
     <a>{{name}}</a>
-<br>
+</div>
+    
+<div>
     <em>Title:</em>
     <a>{{ title}}</a>
-<br>
+</div>
+    
+<div>
     <em>Email:</em>
     <a>{{email}}</a>
 </div>
-{{/each}}
+    {{/each}}
 </div>
 
 <br>
@@ -275,16 +270,20 @@
     <a>{{name}}</a>
 </div>
    
-<br>
+<div> 
     <em>Title:</em>
     <a>{{title}}</a>
-<br>
+</div>
+   
+<div>
     <em>Email:</em>
     <a>{{email}}</a>
-<br>
-    <em>Skills:</em>
-    <a>{{skills}}</a>
 </div>
+    <div>
+    <em>Skills:</em>
+    {{#each skills }}
+    <a>{{this}}</a>
+    <br>
 {{/each}}
 </div>
 <br>
@@ -306,12 +305,16 @@
     <a>{{name}}</a>
 </div>
    
-<br>
-    <em>Description:</em>
+<div> <em>Description:</em>
     <q><a>{{description}}</a></q>
-<br>
+    </div>
+   
+<div>
     <em>Technologies:</em>
+     {{#each technologies}}
     <a>{{this}}</a>
+<br>
+{{/each}}
 </div>
 
 <br>
@@ -332,25 +335,23 @@
     <em>Name:</em>
     <a>{{name}}</a>
 </div>
-<br>
+
 <div>
     <em>Title:</em>
     <a>{{title}}</a>
 </div>
-    
-<br>
+{{/each}}
 <div>
      <em>Name:</em>
     <a>{{name}}</a>
 </div>
-   
-<br>
+ 
 <div>
+    
      <em>Title:</em>
     <a>{{title}}</a>
 </div>
-   {{/each}}
-   </div>
+
 <br>
 </div>
    </section>
@@ -358,6 +359,12 @@
         </details>
         <br>
 <hr/>
+{{/each}}
+</div>
+{{/each}}
+</div>
+{{/each}}
+</div>
 {{/with}}
 
   
