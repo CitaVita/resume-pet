@@ -1,26 +1,27 @@
 <div>
     <p>
-         <h1><strong>Program</strong></h1>
+         
+          <p style="color:#e57395;"><strong>Program</strong></p>
+            
         {{#with program}}
         
 </div>
 
 <div>
-    <b>Excursion:</b> 
+    <p style="color:#9d0000;"><b>Excursion:</b></p>
+     
      {{#with excursion}}
     
-    <em>{{excursion}}</em>
-</div>
-<br>
-<div>
-    <b>Name:</b> 
-    <em>{{name}}</em>
 </div>
 
 <div>
-    <b>Location:</b> 
+    <u><b>Name:</b></u> 
+    <u><em>{{name}}</em></u>
+</div>
+
+<div>
+    <i><b>Location:</b> </i>
      {{#with location}} 
-   <em>{{location}}</em> 
 </div>
 
 <div>
@@ -40,16 +41,16 @@
     <em>{{date}}</em>
 </div>
 
-<br>
+
 
 <div>
-    <b>Program:</b> 
+    <p style="color:#e57395;"><strong>Program</strong></p>
     {{#each program}}
 </div>
-<br>
+
 <div>
-   <b>Name:</b> 
-   <em>{{name}}</em> 
+    <u><b>Name:</b></u> 
+    <u><em>{{name}}</em></u>
 </div>
 
 <div>
@@ -61,23 +62,24 @@
     <b>Duration:</b> 
     <em>{{duration}}</em>
 </div>
-<br>
+
 <div>
-    <b>Details:</b> 
+   <strong><i><b>Details:</b></i></strong> 
 </div>
-    
+    {{#with details}}
    <div>
+    
     <b>Museum:</b> 
     {{#with museum}}  
 </div> 
     
 <div>
-    <b>Name:</b> 
-    <em>{{name}}</em>
+   <u><b>Name:</b> </u> 
+    <u><em>{{name}}</em></u>
 </div>
 
  <div>
-    <b>Location:</b> 
+    <i><b>Location:</b></i>
     {{#with location}}
 </div> 
 
@@ -97,24 +99,23 @@
     <em>{{country}}</em>
 </div>
 {{/with}}
-
 <div>
-    <b>Exhibits:</b> 
+   <p style="color:#9d0000;"><b>Exhibits:</b></p> 
     
 </div>
+    {{#each exhibits}}
 
 <div>
-    <b>Name:</b> 
-    <em>{{name}}</em>
+    <u><b>Name:</b> </u>
+    <u><em>{{name}}</em></u>
 </div>
-
 <div>
-    {{> title data=title artist=true}}
+    <b>Artist:</b>
     {{#if artist}}
     <em>{{artist}}</em> 
     {{else}}
-    <b>{{-}}</b>
-{{/if}}
+    <i>No artist</i>
+    {{/if}}
 </div>
 
 <div>
@@ -124,21 +125,70 @@
 
 <div>
     <b>Audio Guide:</b> 
-{{#unless audio_guide}}
-<h2>{{data}}</h2>
+{{#if audio_guide}}
+<i>With audio guide</i>
 {{else}}
-<h3>{{null}}</h>
-{{/unless}}
-</div>
-{{/with}}
-
+<i>Without audio guide</i>
+{{/if}}
 </div>
 {{/each}}
 
 </div>
 {{/with}}
 
-<br>
+<div>
+    <i><b>Venue:</b></i>
+    {{#with venue}} 
+</div>
+
+<div>
+    <u><b>Name:</b> </u>
+    <u><em>{{name}}</em></u>
+</div>
+
+<div>
+    <i><b>Location:</b></i>
+    {{#with location}}
+</div>
+
+<div>
+    <b>Address:</b> 
+    <em><address>{{address}}</address></em>
+</div>
+
+<div>
+    <b>City:</b> 
+    <em>{{city}}</em>
+</div>
+
+
+<div>
+    <b>Country:</b> 
+    <em>{{country}}</em>
+</div>
+
+{{/with}}
+   </div>
+{{/with}}
+</div>
+
+<div>
+     <p style="color:#9d0000;"><b>Performers:</b></p>
+     {{#each performers}}   
+</div>
+
+<div>
+    <u><b>Name:</b> </u>
+    <u><em>{{name}}</em></u>
+</div>
+
+<div>
+    <u><b>Type:</b> </u>
+    <u><em>{{type}}</em></u>
+</div>
+
+</div>
+{{/each}}
 
 <div>
     <b>Guide:</b> 
@@ -165,97 +215,10 @@
 
 </div>
 
-<div>
-    <b>Name:</b> 
-    <em>{{name}}</em>
-</div>
-
-<div>
-    <b>Type:</b> 
-    <em>{{type}}</em>
-</div>
-<div>
-    <b>Duration:</b> 
-    <em>{{duration}}</em>
-</div>
-
-<div>
-    <b>Details:</b>
-    {{#with details}}  
-</div>
-    
-<div>
-    <b>Venue:</b>
-    {{#with venue}} 
-</div>
-
-<div>
-    <b>Name:</b> 
-    <em>{{name}}</em>
-</div>
-
-<div>
-    <b>Location:</b>
-    {{#with location}}
-</div>
-
-<div>
-    <b>Address:</b> 
-    <em><address>{{address}}</address></em>
-</div>
-
-<div>
-    <b>City:</b> 
-    <em>{{city}}</em>
-</div>
-
-
-<div>
-    <b>Country:</b> 
-    <em>{{country}}</em>
-</div>
-
-{{/with}}
-   </div>
-{{/with}}
-</div>
-
-<div>
-     <b>Performers:</b>
-</div>
-
-<div>
-    <b>Name:</b> 
-    <em>{{name}}</em>
-</div>
-
-<div>
-    <b>Type:</b> 
-    <em>{{type}}</em>
+    {{/each}}
 </div>
 {{/with}}
-</div>
-
-<div>
-     <b>Guide:</b> 
-     {{#with guide}}
-</div>
-
-<div>
-    <b>Name:</b> 
-    <em>{{name}}</em>
-</div>
-
-<div>
-    <b>Language:</b> 
-    <em>{{name}}</em>
-</div>
-
-<div>
-    <b>Rating:</b> 
-    <em>{{rating}}</em>
 </div>
 {{/with}}
 </p>
 </div>
-  

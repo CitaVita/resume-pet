@@ -1,0 +1,140 @@
+<div>
+    <p>
+			<div><p style="color:blue;">Web</p>
+        {{#with web}}
+				</div>
+			
+					<div>
+						<p style="color:#a2ff00;">Languages:</p>
+            {{#each languages}}
+            </div>
+
+                <div>
+                    <i>Name:</i>
+                    {{name}}
+                </div>   
+          
+                <div>
+                    <i>Version:</i>
+                    {{version}}
+                </div>   
+
+                <div>
+                    <i>Description:</i>
+                    <q>{{description}}</q>
+                </div>   
+<div>
+<p style="color:#a2ff00;">Elements:</p>
+	{{#each elements}}
+	</div>
+        <div>
+            <i>Name:</i>
+              {{name}}
+        </div>   
+
+      <div>
+           <i>Description:</i>
+             <q>{{description}}</q>
+      </div>   
+  </div>
+
+<div>
+<p style="color:#a2ff00;">Attributes:</p>
+	{{#each attributes}}
+	</div>
+        <div>
+            <i>Name:</i>
+              {{name}}
+        </div>   
+
+      <div>
+           <i>Description:</i>
+             <q>{{description}}</q>
+      </div>   
+	{{/each}}
+</div>
+	{{/each}}
+</div>
+{{/with}}
+<div>
+<p style="color:#a2ff00;">Properties:</p>
+	{{#each  properties}}
+	</div>
+        <div>
+            <i>Name:</i>
+              {{name}}
+        </div>   
+
+      <div>
+           <i>Description:</i>
+             <q>{{description}}</q>
+      </div>  
+
+<div>
+<p style="color:#a2ff00;">Values:</p>
+	{{#each values}}
+	</div>
+        <div>
+            <i>Value:</i>
+              {{value}}
+        </div>   
+
+      <div>
+           <i>Description:</i>
+             <q>{{description}}</q>
+      </div>   
+	{{/each}}
+
+</div>
+	{{/each}}
+</div>
+	{{/each}}
+
+<div>
+<p style="color:#a2ff00;">Functions:</p>
+	{{#each functions}}
+	</div>
+        <div>
+            <i>Name:</i>
+              {{name}}
+        </div>   
+
+      <div>
+           <i>Description:</i>
+             <q>{{description}}</q>
+      </div>  
+</div> 
+
+<div>
+<p style="color:#a2ff00;">Parameters:</p>
+	{{#each parameters}}
+	</div>
+        <div>
+            <i>Name:</i>
+              {{name}}
+        </div>   
+
+      <div>
+           <i>Type:</i>
+             <q>{{type}}</q>
+      </div>  
+<div>
+     <i>Description:</i>
+     <q>{{description}}</q>
+</div> 
+ 
+{{/each}}
+
+</div> 
+{{/each}}
+
+</div> 
+{{/each}}
+
+</div> 
+{{/each}}
+</div> 
+{{/with}}
+
+    </p>
+</div>
