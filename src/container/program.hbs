@@ -173,8 +173,22 @@
 </div>
 
 <div>
-     <p style="color:#9d0000;"><b>Performers:</b></p>   
+     <p style="color:#9d0000;"><b>Performers:</b></p>
+     {{#each performers}}   
 </div>
+
+<div>
+    <u><b>Name:</b> </u>
+    <u><em>{{name}}</em></u>
+</div>
+
+<div>
+    <u><b>Type:</b> </u>
+    <u><em>{{type}}</em></u>
+</div>
+
+</div>
+{{/each}}
 
 <div>
     <b>Guide:</b> 
