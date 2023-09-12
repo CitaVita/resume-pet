@@ -1,21 +1,21 @@
 <div>
     <p>
-			<div><p style="color:blue;">Web</p>
+			<div><p style="color:blue;"><h1>Web</h1></p>
         {{#with web}}
 				</div>
 			
 					<div>
-						<p style="color:#a2ff00;">Languages:</p>
+						<p style="color:#c99e1a;"><b>Languages:</b></p>
             {{#each languages}}
             </div>
 
                 <div>
-                    <i>Name:</i>
+                  <i>Name:</i>
                     {{name}}
                 </div>   
           
                 <div>
-                    <i>Version:</i>
+                   <i>Version:</i>
                     {{version}}
                 </div>   
 
@@ -23,11 +23,15 @@
                     <i>Description:</i>
                     <q>{{description}}</q>
                 </div>   
-								<br>
+							
+							
 <div>
-<p style="color:#a2ff00;">Elements:</p>
+	{{#if elements}}
+	<p style="color:#c99e1a;"><b>Elements:</b></p>
+	{{/if}}
 	{{#each elements}}
 	</div>
+	
         <div>
             <i>Name:</i>
               {{name}}
@@ -36,11 +40,9 @@
       <div>
            <i>Description:</i>
              <q>{{description}}</q>
-      </div>   
-  </div>
-
+</div>
 <div>
-<p style="color:#a2ff00;">Attributes:</p>
+	<p style="color:#c99e1a;"><b>Attributes:</b></p>
 	{{#each attributes}}
 	</div>
         <div>
@@ -51,11 +53,15 @@
       <div>
            <i>Description:</i>
              <q>{{description}}</q>
-      </div>   
+      </div>  
+			 
 	{{/each}}
-
+  </div>   
+	{{/each}}
 <div>
-<p style="color:#a2ff00;">Properties:</p>
+	{{#if properties}}
+	<p style="color:#c99e1a;"><b>Properties:</b></p>
+	{{/if}}
 	{{#each  properties}}
 	</div>
         <div>
@@ -69,7 +75,7 @@
       </div>  
 
 <div>
-<p style="color:#a2ff00;">Values:</p>
+	<p style="color:#c99e1a;"><b>Values:</b></p>
 	{{#each values}}
 	</div>
         <div>
@@ -85,11 +91,9 @@
 
 </div>
 	{{/each}}
-</div>
-	{{/each}}
-
 <div>
-<p style="color:#a2ff00;">Functions:</p>
+	<p style="color:#c99e1a;"><b>Functions:</b></p>
+
 	{{#each functions}}
 	</div>
         <div>
@@ -104,7 +108,7 @@
 </div> 
 
 <div>
-<p style="color:#a2ff00;">Parameters:</p>
+		<p style="color:#c99e1a;"><b>Parameters:</b></p>
 	{{#each parameters}}
 	</div>
         <div>
@@ -125,12 +129,11 @@
 
 </div> 
 {{/each}}
+</div>
 
-</div> 
 {{/each}}
 
-</div> 
-{{/each}}
+
 </div> 
 {{/with}}
 
