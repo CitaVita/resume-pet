@@ -1,0 +1,150 @@
+<div>
+
+    <div>
+        <b>Name:</b>
+        <i>{{name}}</i>
+    </div>
+
+ <div>
+        <b>description:</b>
+        <i>{{description}}</i>
+    </div>
+
+    <div>
+        <b>history:</b>
+        <i>{{#with history}}</i>
+    </div>
+<div>
+        <b>Year:</b>
+        <i>{{year}}</i>
+    </div>
+
+<div>
+        <b>Founder:</b>
+        <i>{{founder}}</i>
+    </div>
+{{/with}}
+
+<br>
+
+<div>
+    <b>Types:</b>
+        <i>{{#each types}}</i>
+     <i>{{this}}</i>
+</div>
+ {{/each}}
+
+ <br>
+
+<div>
+    <ul>
+       
+        <h2><span class="badge text-bg-success">Syntax</span></h2>
+    <i>{{#with syntax}}</i>
+</div>
+
+<div class="accordion accordion-flush" id="accordionFlushExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+        Variables:
+      </button>
+    </h2>
+    <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">var, let, const</div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+       Functions:
+      </button>
+    </h2>
+    <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">function</div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+       Conditionals:
+      </button>
+    </h2>
+    <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">if, else, switch</div>
+    </div>
+     <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+       Loops:
+      </button>
+    </h2>
+    <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">for, while, do-while</div>
+    </div>
+     <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+       Classes:
+      </button>
+    </h2>
+    <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">clas</div>
+    </div>
+  </div>
+</div>
+
+
+{{/with}}
+</ul>
+</div>
+
+<br>
+
+<div>
+    <b>Features:</b>
+        <i>{{#each features}}</i>
+     <i>{{this}}</i>
+</div>
+ {{/each}}
+
+<br>
+
+<div>
+    <b>Libraries:</b>
+        <i>{{#each libraries}}</i>
+     <i>{{this}}</i>
+</div>
+ {{/each}}
+
+<br>
+
+<div>
+    <b>Tools:</b>
+        <i>{{#each libraries}}</i>
+     <i>{{this}}</i>
+</div>
+ {{/each}}
+
+<br>
+
+<div>
+    <button type="button" class="btn btn-link">Community:</button>
+        <i>{{#each community}}</i>
+     
+      <div>
+        <b>Nane:</b>
+        <i>{{name}}</i>
+    </div>
+
+<div>
+        <b>Type:</b>
+        <i>{{type}}</i>
+    </div>
+
+
+</div>
+ {{/each}}
+
+
+</div>
