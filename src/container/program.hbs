@@ -1,0 +1,224 @@
+<div>
+    <p>
+         
+          <p style="color:#e57395;"><strong>Program</strong></p>
+            
+        {{#with program}}
+        
+</div>
+
+<div>
+    <p style="color:#9d0000;"><b>Excursion:</b></p>
+     
+     {{#with excursion}}
+    
+</div>
+
+<div>
+    <u><b>Name:</b></u> 
+    <u><em>{{name}}</em></u>
+</div>
+
+<div>
+    <i><b>Location:</b> </i>
+     {{#with location}} 
+</div>
+
+<div>
+    <b>City:</b> 
+    <em>{{city}}</em>
+</div>
+
+<div>
+    <b>Country:</b> 
+    <em>{{country}}</em>
+</div>
+    {{/with}}
+</div>
+
+<div>
+    <b>Date:</b> 
+    <em>{{date}}</em>
+</div>
+
+
+
+<div>
+    <p style="color:#e57395;"><strong>Program</strong></p>
+    {{#each program}}
+</div>
+
+<div>
+    <u><b>Name:</b></u> 
+    <u><em>{{name}}</em></u>
+</div>
+
+<div>
+    <b>Type:</b> 
+    <em>{{type}}</em>
+</div>
+
+<div>
+    <b>Duration:</b> 
+    <em>{{duration}}</em>
+</div>
+
+<div>
+   <strong><i><b>Details:</b></i></strong> 
+</div>
+    {{#with details}}
+   <div>
+    
+    <b>Museum:</b> 
+    {{#with museum}}  
+</div> 
+    
+<div>
+   <u><b>Name:</b> </u> 
+    <u><em>{{name}}</em></u>
+</div>
+
+ <div>
+    <i><b>Location:</b></i>
+    {{#with location}}
+</div> 
+
+<div>
+    <b>Address:</b> 
+    <em><address>{{address}}</address></em>
+</div>
+
+<div>
+    <b>City:</b> 
+    <em>{{city}}</em>
+</div>
+
+
+<div>
+    <b>Country:</b> 
+    <em>{{country}}</em>
+</div>
+{{/with}}
+<div>
+   <p style="color:#9d0000;"><b>Exhibits:</b></p> 
+    
+</div>
+    {{#each exhibits}}
+
+<div>
+    <u><b>Name:</b> </u>
+    <u><em>{{name}}</em></u>
+</div>
+<div>
+    <b>Artist:</b>
+    {{#if artist}}
+    <em>{{artist}}</em> 
+    {{else}}
+    <i>No artist</i>
+    {{/if}}
+</div>
+
+<div>
+    <b>Description:</b> 
+    <em><q>{{description}}</q></em>
+</div>
+
+<div>
+    <b>Audio Guide:</b> 
+{{#if audio_guide}}
+<i>With audio guide</i>
+{{else}}
+<i>Without audio guide</i>
+{{/if}}
+</div>
+{{/each}}
+
+</div>
+{{/with}}
+
+<div>
+    <i><b>Venue:</b></i>
+    {{#with venue}} 
+</div>
+
+<div>
+    <u><b>Name:</b> </u>
+    <u><em>{{name}}</em></u>
+</div>
+
+<div>
+    <i><b>Location:</b></i>
+    {{#with location}}
+</div>
+
+<div>
+    <b>Address:</b> 
+    <em><address>{{address}}</address></em>
+</div>
+
+<div>
+    <b>City:</b> 
+    <em>{{city}}</em>
+</div>
+
+
+<div>
+    <b>Country:</b> 
+    <em>{{country}}</em>
+</div>
+
+{{/with}}
+   </div>
+{{/with}}
+</div>
+
+<div>
+     <p style="color:#9d0000;"><b>Performers:</b></p>
+     {{#each performers}}   
+</div>
+
+<div>
+    <u><b>Name:</b> </u>
+    <u><em>{{name}}</em></u>
+</div>
+
+<div>
+    <u><b>Type:</b> </u>
+    <u><em>{{type}}</em></u>
+</div>
+
+</div>
+{{/each}}
+
+<div>
+    <b>Guide:</b> 
+    {{#with guide}}
+</div>
+
+<div>
+    <b>Name:</b> 
+    <em>{{name}}</em>
+</div>
+
+<div>
+    <b>Language:</b> 
+    <em>{{name}}</em>
+</div>
+
+<div>
+    <b>Rating:</b> 
+    <em>{{rating}}</em>
+</div>
+    {{/with}}
+</div>
+    {{/with}}
+
+</div>
+
+    {{/each}}
+</div>
+{{/with}}
+</div>
+{{/with}}
+</p>
+</div>
