@@ -1,38 +1,67 @@
 <div>
 
     <div>
-        <b>Name:</b>
-        <i>{{name}}</i>
+      <h1><p class="text-start", style="color:#AD3BA9;">JavaScript</p></h1> 
     </div>
 
- <div>
-        <b>description:</b>
-        <i>{{description}}</i>
-    </div>
+<div class="card">
+  <div class="card-header">
+    Description:
+  </div>
+  <div class="card-body">
+    <blockquote class="blockquote mb-0">
+      <p>JavaScript is a popular high-level, dynamic, and interpreted programming language.</p>
+    </blockquote>
+  </div>
+</div>
+<br>
+<br>
+<div class="card text-bg-light mb-3" style="max-width: 18rem;">
+  <div class="card-header">History:</div>
+  <div class="card-body">
+    <h5 class="card-title">Founder: Brendan Eich</h5>
+    <p class="card-text">Year: 1995</p>
+  </div>
 
-    <div>
-        <b>history:</b>
-        <i>{{#with history}}</i>
-    </div>
-<div>
-        <b>Year:</b>
-        <i>{{year}}</i>
-    </div>
-
-<div>
-        <b>Founder:</b>
-        <i>{{founder}}</i>
-    </div>
-{{/with}}
 
 <br>
-
+<div class="text-bg-secondary p-3">Types:</div>
 <div>
-    <b>Types:</b>
-        <i>{{#each types}}</i>
-     <i>{{this}}</i>
+<ul class="list-group">
+  <li class="list-group-item">
+    <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+    <label class="form-check-label" for="firstCheckbox">Number</label>
+  </li>
+  <li class="list-group-item">
+    <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox">
+    <label class="form-check-label" for="secondCheckbox">String</label>
+  </li>
+  <li class="list-group-item">
+    <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
+    <label class="form-check-label" for="thirdCheckbox">Boolean</label>
+  </li>
+  </li>
+  <li class="list-group-item">
+    <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
+    <label class="form-check-label" for="thirdCheckbox">Null</label>
+  </li>
+  </li>
+  <li class="list-group-item">
+    <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
+    <label class="form-check-label" for="thirdCheckbox">Undefined</label>
+  </li>
+  </li>
+  <li class="list-group-item">
+    <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
+    <label class="form-check-label" for="thirdCheckbox">Symbol</label>
+  </li>
+  </li>
+  <li class="list-group-item">
+    <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
+    <label class="form-check-label" for="thirdCheckbox">Object</label>
+  </li>
+</ul>
 </div>
- {{/each}}
 <br>
  <br>
 <br>
@@ -101,50 +130,147 @@
 
 <br>
 
-<div>
-    <b>Features:</b>
-        <i>{{#each features}}</i>
-     <i>{{this}}</i>
+
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    FEATURES
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">First-class functions</a></li>
+    <li><a class="dropdown-item" href="#">Closures</a></li>
+    <li><a class="dropdown-item" href="#">Dynamic typing</a></li>
+    <li><a class="dropdown-item" href="#">Prototype-based inheritance</a></li>
+    <li><a class="dropdown-item" href="#">CAsynchronous programming with Promises and async/await</a></li>
+    <li><a class="dropdown-item" href="#">Modules with import/export statements</a></li>
+  </ul>
 </div>
- {{/each}}
 
 <br>
 
-<div>
-    <b>Libraries:</b>
-        <i>{{#each libraries}}</i>
-     <i>{{this}}</i>
+
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+    LIBRARIES
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">jQuery</a></li>
+    <li><a class="dropdown-item" href="#">React</a></li>
+    <li><a class="dropdown-item" href="#">Angular</a></li>
+    <li><a class="dropdown-item" href="#">Vue</a></li>
+    <li><a class="dropdown-item" href="#">Node.js</a></li>
+    <li><a class="dropdown-item" href="#">Express.js</a></li>
+    <li><a class="dropdown-item" href="#">Lodash</a></li>
+    <li><a class="dropdown-item" href="#">Moment.js</a></li>
+  </ul>
 </div>
- {{/each}}
 
 <br>
 
-<div>
-    <b>Tools:</b>
-        <i>{{#each libraries}}</i>
-     <i>{{this}}</i>
+
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+   TOOLS
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">Babel</a></li>
+    <li><a class="dropdown-item" href="#">Webpack</a></li>
+    <li><a class="dropdown-item" href="#">ESLint</a></li>
+    <li><a class="dropdown-item" href="#">Jest</a></li>
+    <li><a class="dropdown-item" href="#">Mocha</a></li>
+    <li><a class="dropdown-item" href="#">Chai</a></li>
+    <li><a class="dropdown-item" href="#">Selenium</a></li>
+    <li><a class="dropdown-item" href="#">Cypress</a></li>
+  </ul>
 </div>
- {{/each}}
 
 <br>
 
-<div>
-    <button type="button" class="btn btn-link">Community:</button>
-        <i>{{#each community}}</i>
-     
-      <div>
-        <b>Nane:</b>
-        <i>{{name}}</i>
+ <h2><span class="badge text-bg-success">Сommunity</span></h2>
+    <i>{{#with community}}</i>
+</div>
+
+<div class="accordion accordion-flush" id="accordionFlushExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+        Name:
+      </button>
+    </h2>
+    <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">Stack Overflow</div>
     </div>
-
-<div>
-        <b>Type:</b>
-        <i>{{type}}</i>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+     Type:
+      </button>
+    </h2>
+    <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">forum</div>
     </div>
-
-
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+        Name:
+      </button>
+    </h2>
+    <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">JavaScript Weekly</div>
+    </div>
+     <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+        Type:
+      </button>
+    </h2>
+    <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">newsletter</div>
+    </div>
+     <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+       Name:
+      </button>
+    </h2>
+    <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">The Changelog</div>
+    </div>
+    <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+     Type:
+      </button>
+    </h2>
+    <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">podcast</div>
+    </div>
+     <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+       Name:
+      </button>
+    </h2>
+    <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">CSS-Tricks</div>
+    </div>
+    <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+     Type:
+      </button>
+    </h2>
+    <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">blog</div>
+    </div>
+    {{/with}}
+  </div>
 </div>
- {{/each}}
 
 
-</div>
+
+
+
+
+
