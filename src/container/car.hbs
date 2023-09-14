@@ -21,11 +21,18 @@
    {{color}}
 </div>
 
+ <br>
+<hr>
 <br>
 <div>
+    {{#if features}}
+    
      <b>Features:</b> 
+     {{/if}}
     {{#with features}}
 </div>
+ <br>
+<hr>
 <br>
 <div>
      <b>Interior:</b> 
@@ -34,7 +41,7 @@
 <br>
 <div>
     <ul> 
-    <b>Seats:</b> 
+    <p style="color:#5b5b5b;"><b><u>Seats</u></b></p>
     {{#with seats}}
     <li>
         <b>Material:</b>
@@ -67,11 +74,10 @@
 </div>
 {{/with}}
 <br>
-<hr>
 <br>
 <div>
     <ul>
-    <b>Dashboard :</b>
+        <p style="color:#5b5b5b;"><b><u>Dashboard</u></b></p>
     {{#with dashboard}}
 
 <li>
@@ -85,12 +91,11 @@
     </li>
     </ul>
     </div>
-    <br>
-<hr>
+<br>
 <br>
 <div>
     <ul>
-    <b>Display:</b>
+         <p style="color:#5b5b5b;"><b><u>Display</u></b></p>
     {{#with display}}
 <li>
         <b>Type:</b>
@@ -120,11 +125,10 @@
       </div>
     {{/with}}
 <br>
-<hr>
 <br>
 <div>
     <ul>
-    <b>Audio:</b>
+         <p style="color:#5b5b5b;"><b><u>Audio</u></b></p>
     {{#with audio}}
    <li>
       <b>System:</b>
@@ -169,12 +173,15 @@
 <br>
 <hr>
 <br>
+
+<div>
+     <b>Exterior:</b> 
+    {{#with exterior}}
+</div>    
+<br>
 <div>
     <ul>
-    <b>Exterior:</b>
-    {{#with exterior}}
-
-    <b>Wheels:</b>
+<p style="color:#5b5b5b;"><b><u>Wheels</u></b></p>
     {{#with wheels}}
    <li>
       <b>Size:</b>
@@ -194,12 +201,11 @@
     </div>
     {{/with}}
 <br>
-<hr>
 <br>
 <div>
     <ul>
-    <b>Headlights:</b>
-    {{#with audio}}
+       <p style="color:#5b5b5b;"><b><u>Headlights</u></b></p>
+    {{#with  headlights}}
    <li>
       <b>Type:</b>
           {{type}} 
@@ -221,11 +227,10 @@
     </div>
     {{/with}}
  <br>
-<hr>
 <br>
 <br>
     <ul>
-    <b>Sunroof:</b>
+        <p style="color:#5b5b5b;"><b><u>Sunroof</u></b></p>
     {{#with sunroof}}
    <li>
       <b>Type:</b>
@@ -253,14 +258,15 @@
 <hr>
 <br>
 <div>
+    <b>Safety:</b>
+    {{#with safety}}
+  </div>      
+<div>
     <ul>
-        <b>Safety:</b>
-        {{#with safety}}
-        <br>
-        <b>Airbags:</b>
+         <p style="color:#5b5b5b;"><b><u>Airbags</u></b></p>
         {{#with airbags}}
         
-<li>
+    <li>
         <b>front:</b>
           {{front}} 
     </li>
@@ -280,11 +286,12 @@
 </div>
 {{/with}}
 <br>
-<hr>
 <br>
 <div>
-    <b>Assistance:</b>
+    <ul>
+    <p style="color:#5b5b5b;"><b><u>Assistance</u></b></p>
     {{#with assistance}}
+    </ul>
 </div>
 <div> 
     <b>Blind spot monitoring:</b>
@@ -337,11 +344,10 @@
 </div>
 {{/with}}
 <br>
-<hr>
 <br>
 <div>
     <ul>
-        <b>Engine</b>
+         <p style="color:#5b5b5b;"><b><u>Engine</u></b></p>
         {{#with engine}}
 
         <li>
@@ -365,9 +371,11 @@
         </li>
 </ul>
 </div>
+<br>
+<br>
 <div>
     <ul>
-    <b>Transmission:</b>
+        <p style="color:#5b5b5b;"><b><u>Transmission</u></b></p>
     {{#with transmission}}
 
      <li>
@@ -385,11 +393,10 @@
 </div>
 {{/with}}
 <br>
-<hr>
 <br>
 <div>
     <ul>
-    <b>Fuel economy:</b>
+         <p style="color:#5b5b5b;"><b><u>Fuel economy</u></b></p>
     {{#with fuel_economy}}
 
      <li>
@@ -414,7 +421,7 @@
 <br>
 <div>
     <ul>
-    <b>Price:</b>
+        <p style="color:#5b5b5b;"><b><u>Price:</u></b></p>
     {{#with price}}
 
      <li>
@@ -428,10 +435,12 @@
         </li>
         </ul>
         </div>
-
+<br>
+<hr>
+<br>
         <div>
     <ul>
-    <b>Options:</b>
+        <p style="color:#5b5b5b;"><b><u>Options:</u></b></p>
     {{#with options}}
 
      <li>
@@ -451,9 +460,15 @@
 </ul>
 </div>
 {{/with}}
+<br>
+<hr>
+<br>
 <div>
     <b>Total:</b>
     {{total}}
 </div>
 </div>
 {{/with}}
+<br>
+<hr>
+<br>
