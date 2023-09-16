@@ -26,7 +26,7 @@
             <div>
                 <ul>  
                     <i>Processor:</i>
-                {{#with processor}}
+                    {{#with processor}}
             <li>
     <i>Brand:</i>
         {{brand}}
@@ -49,13 +49,12 @@
         </li>
     </ul>
 </div>
-    {{/with}}
+{{/with}}
     <br>
-<br>
     <div>
         <ul>  
             <i>Memory:</i>
-                {{#with memory}}
+            {{#with memory}}
             <li>
     <i>Type:</i>
         {{type}}
@@ -70,22 +69,32 @@
         </li>
    </ul>
 </div>
-    {{/with}}
+  {{/with}}
     <br>
-<br>
     <div>
         <ul>  
             <i>Storage:</i>
                 {{#with storage}}
-                   </ul>
-            </div>
-    {{/with}}
+        <li>
+    <i>Type:</i>
+        {{type}}
+                </li>
+                    <li>
+                <i>Size:</i>
+            {{size}}
+        </li>
+        </ul>
+    </div>
+        {{/with}}
     <br>
-<br>
 <div>
         <ul>  
             <i>Display:</i>
                 {{#with display}}
+                        <li>
+                <i>Size:</i>
+            {{size}}
+        </li>
             <li>
     <i>Resolution:</i>
         {{resolution}}
@@ -108,52 +117,58 @@
         </li>
             </ul>
         </div>
-    {{/with}}
+        {{/with}}
     <br>
-<br>
     <div>
         <ul>  
             <i>Graphics:</i>
                 {{#with graphics}}
+                       <li>
+                <i>Brand:</i>
+        {{brand}}
+                </li>
+                    <li>
+                <i>Model:</i>
+            {{model}}
+        </li>
             <li>
     <i>Memory:</i>
         {{memory}}
                 </li>
             </ul>
         </div>
-    {{/with}}
+        {{/with}}
     <br>
-<br>
    <div>
         <ul>  
             <i>Ports:</i>
                 {{#each ports}}
-            <li>
-    <i>Type:</i>
-        {{type}}
-                </li>
-                    <li>
-            <i>Count:</i>
-        {{count}}
-                </li>
-                <i>Features:</i>
-                {{#each features}}
-        {{this}}
-                </li>
             </ul>
-</div>
+            <ul>
+                <i>Type:</i>
+        {{type}}
+        </ul>
+        
+        <ul>
+          <i>Count:</i>
+        {{count}}
+        </ul>
+    </div>     
+     <br>
+    {{#if features}}
+                <i>Features:</i>
+               {{/if}}
+                {{#each features}}
+                <ul><li>{{this}}</li>  </ul>
+                 </div>
     {{/each}}
-    <br>
-<br>
-</div>
-    {{/with}}
-
-       <br>
-    <br>
+   </div>
+    {{/each}}
+ <br>
     <div>
         <ul>  
             <i>Battery:</i>
-                {{#each battery}}
+                {{#with battery}}
             <li>
     <i>Type:</i>
         {{type}}
@@ -168,13 +183,12 @@
         </li>
     </ul>
 </div>
-    {{/with}}
-    <br>
-<br>
-    <li>
-        <i>Weight:</i>
-        {{weight}}
-                </li>
+{{/with}}
+<div>
+    <ul><i>Weight:</i>
+        {{weight}}</ul></div>
+     
+        
             <div>
         <ul>  
             <i>Dimensions:</i>
@@ -193,28 +207,29 @@
                 </li>
             </ul>
         </div>
-    {{/with}}
-    <br>
-<br>
+        {{/with}}
+   <br>
 <div>
-    <a>Operating System:</a>
+    <ul>Operating System:
         {{operating_system}}
+        </ul>
     </div>
-<br>
     <br>
      <div>
         <ul>  
             <i>Accessories:</i>
                 {{#each accessories}}
+                 </ul>
+                 <ul>
             <li>
     <i>Name:</i>
         {{name}}
                 </li>
                     <li>
-            <i>Price::</i>
-        {{price:}}
+            <i>Price:</i>
+        {{price}}
                 </li>
-            </ul>
+                </ul>
         </div>
             {{/each}}
          </div>
