@@ -1,52 +1,34 @@
 <div>
-<br>
-<br>
- <div>
-        <figure class="text-center">
-  <blockquote class="blockquote">
-   <h1><p style="color:#13199C;">{{name}}</p></h1>
-  </blockquote>
-       </div>
-<br>
-<br>
-<dl class="row">
-  <dt class="col-sm-3">Description:</dt>
-  <dd class="col-sm-9"><q><i>{{description}}</i></q></dd>
-
-  <dt class="col-sm-3">Price:</dt>
-  <dd class="col-sm-9">
-    <p><b><p>{{price}}</p></b></p>
-  </dd>
-
-  <dt class="col-sm-3">Category:</dt>
-  <dd class="col-sm-9">{{category}}</dd>
-    </dl>
-  </dd>
-</dl>
-  
-<br>
-<br>
-
-
-<div class="d-grid gap-2 col-3 mx-auto">
-<h3><span class="badge rounded-pill text-bg-primary">Buy now</span></h3>
-<br>
-<br>
- </div>
-<details>
-    <summary>Features</summary>
     <div>
-
+        <i>Name:</i>
+        {{name}}
+    </div>
+<div>
+    <i>Description:</i>
+        <q>{{description}}</q> 
+</div>
+<div>
+    <i>Price:</i>
+        {{price}}
+</div>
+    <div>
+        <i>Category:</i>
+        {{category}} 
+</div>
+    <br>
+        <hr>
+            <br>
+    <div>
+        <i>Featuresy:</i>
         {{#with features}}
     </div>
-    <br>
+        <br>
             <div>
                 <ul>  
-                    <p style="color:#E4E11D;"><b>Processor:</b></p>
-                    
+                    <i>Processor:</i>
                     {{#with processor}}
             <li>
-                  <i>Brand:</i>
+    <i>Brand:</i>
         {{brand}}
                 </li>
                     <li>
@@ -68,10 +50,10 @@
     </ul>
 </div>
 {{/with}}
-<br>
+    <br>
     <div>
         <ul>  
-             <p style="color:#E4E11D;"><b>Memory:</b></p>
+            <i>Memory:</i>
             {{#with memory}}
             <li>
     <i>Type:</i>
@@ -88,10 +70,10 @@
    </ul>
 </div>
   {{/with}}
-   <br>
+    <br>
     <div>
         <ul>  
-            <p style="color:#E4E11D;"><b>Storage:</b></p>
+            <i>Storage:</i>
                 {{#with storage}}
         <li>
     <i>Type:</i>
@@ -106,9 +88,8 @@
         {{/with}}
     <br>
 <div>
-    <ul>  
-        <p style="color:#E4E11D;"><b>Display:</b></p>
-           
+        <ul>  
+            <i>Display:</i>
                 {{#with display}}
                         <li>
                 <i>Size:</i>
@@ -137,11 +118,10 @@
             </ul>
         </div>
         {{/with}}
-             
+    <br>
     <div>
         <ul>  
-             <p style="color:#E4E11D;"><b>Graphics:</b></p>
-            
+            <i>Graphics:</i>
                 {{#with graphics}}
                        <li>
                 <i>Brand:</i>
@@ -159,13 +139,9 @@
         </div>
         {{/with}}
     <br>
-    
-       
-</details>
-
-        <div>
-        <ul> 
-            <p style="color:#E4E11D;"><b>Ports:</b></p> 
+   <div>
+        <ul>  
+            <i>Ports:</i>
                 {{#each ports}}
             </ul>
             <ul>
@@ -180,8 +156,7 @@
     </div>     
      <br>
     {{#if features}}
-
-    <span class="badge rounded-pill text-bg-secondary"> <i>Features:</i></span>
+                <i>Features:</i>
                {{/if}}
                 {{#each features}}
                 <ul><li>{{this}}</li>  </ul>
@@ -190,11 +165,9 @@
    </div>
     {{/each}}
  <br>
-  
-    
     <div>
         <ul>  
-            <span class="badge rounded-pill text-bg-dark"><i>Battery:</i></span>
+            <i>Battery:</i>
                 {{#with battery}}
             <li>
     <i>Type:</i>
@@ -218,8 +191,7 @@
         
             <div>
         <ul>  
-             <span class="badge rounded-pill text-bg-dark"><i>Dimensions:</i></span>
-            
+            <i>Dimensions:</i>
                 {{#with dimensions}}
             <li>
     <i>Height:</i>
@@ -238,40 +210,27 @@
         {{/with}}
    <br>
 <div>
-    <ul></ul>
-    <button type="button" class="btn btn-outline-warning">Operating System</button>
-       <h3><strong> ☞ macOS</strong></h3> 
+    <ul>Operating System:
+        {{operating_system}}
         </ul>
     </div>
-</div>
-
     <br>
-        <hr>
-            <br>
-            
-    <br>
-
-
-
      <div>
         <ul>  
-            <figure class="text-center">
-  <blockquote class="blockquote">
-    <h3> <p style="color:#13199C;">Accessories</p></h3>
-  </blockquote>
-        <br>
-        <br>
+            <i>Accessories:</i>
                 {{#each accessories}}
-             
-<ul>
-  <dl class="row">
-  <dt class="col-sm-3">Name:</dt>
-  <dd class="col-sm-9"><u>{{name}}</u></dd>
-
-  <dt class="col-sm-3">Price:</dt>
-  <dd class="col-sm-9"><b>{{price}}</b></dd>
-</ul>
-
+                 </ul>
+                 <ul>
+            <li>
+    <i>Name:</i>
+        {{name}}
+                </li>
+                    <li>
+            <i>Price:</i>
+        {{price}}
+                </li>
+                </ul>
+        </div>
             {{/each}}
          </div>
     {{/with}}
