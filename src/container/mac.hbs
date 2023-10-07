@@ -1,0 +1,277 @@
+<div>
+<br>
+<br>
+ <div>
+        <figure class="text-center">
+  <blockquote class="blockquote">
+   <h1><p style="color:#13199C;">{{name}}</p></h1>
+  </blockquote>
+       </div>
+<br>
+<br>
+<dl class="row">
+  <dt class="col-sm-3">Description:</dt>
+  <dd class="col-sm-9"><q><i>{{description}}</i></q></dd>
+
+  <dt class="col-sm-3">Price:</dt>
+  <dd class="col-sm-9">
+    <p><b><p>{{price}}</p></b></p>
+  </dd>
+
+  <dt class="col-sm-3">Category:</dt>
+  <dd class="col-sm-9">{{category}}</dd>
+    </dl>
+  </dd>
+</dl>
+  
+<br>
+<br>
+
+
+<div class="d-grid gap-2 col-3 mx-auto">
+<h3><span class="badge rounded-pill text-bg-primary">Buy now</span></h3>
+<br>
+<br>
+ </div>
+<details>
+    <summary>Features</summary>
+    <div>
+
+        {{#with features}}
+    </div>
+    <br>
+            <div>
+                <ul>  
+                    <p style="color:#E4E11D;"><b>Processor:</b></p>
+                    
+                    {{#with processor}}
+            <li>
+                  <i>Brand:</i>
+        {{brand}}
+                </li>
+                    <li>
+                <i>Model:</i>
+            {{model}}
+        </li>
+    <li>
+        <i>Speed:</i>
+            {{speed}}
+                    </li>
+                <li>
+            <i>Cores:</i>
+        {{cores}}
+    </li>
+<li>
+  <i>Cache:</i>
+            {{cache}}
+        </li>
+    </ul>
+</div>
+{{/with}}
+<br>
+    <div>
+        <ul>  
+             <p style="color:#E4E11D;"><b>Memory:</b></p>
+            {{#with memory}}
+            <li>
+    <i>Type:</i>
+        {{type}}
+                </li>
+                    <li>
+                <i>Size:</i>
+            {{size}}
+        </li>
+    <li>
+        <i>Speed:</i>
+            {{speed}}
+        </li>
+   </ul>
+</div>
+  {{/with}}
+   <br>
+    <div>
+        <ul>  
+            <p style="color:#E4E11D;"><b>Storage:</b></p>
+                {{#with storage}}
+        <li>
+    <i>Type:</i>
+        {{type}}
+                </li>
+                    <li>
+                <i>Size:</i>
+            {{size}}
+        </li>
+        </ul>
+    </div>
+        {{/with}}
+    <br>
+<div>
+    <ul>  
+        <p style="color:#E4E11D;"><b>Display:</b></p>
+           
+                {{#with display}}
+                        <li>
+                <i>Size:</i>
+            {{size}}
+        </li>
+            <li>
+    <i>Resolution:</i>
+        {{resolution}}
+                </li>
+                    <li>
+                <i>Technology:</i>
+            {{technology}}
+        </li>
+    <li>
+        <i>Color Space:</i>
+            {{color_space}}
+        </li>
+              <li>
+                <i>Brightness:</i>
+            {{brightness}}
+        </li>
+    <li>
+        <i>Refresh Rate:</i>
+            {{refresh_rate}}
+        </li>
+            </ul>
+        </div>
+        {{/with}}
+             
+    <div>
+        <ul>  
+             <p style="color:#E4E11D;"><b>Graphics:</b></p>
+            
+                {{#with graphics}}
+                       <li>
+                <i>Brand:</i>
+        {{brand}}
+                </li>
+                    <li>
+                <i>Model:</i>
+            {{model}}
+        </li>
+            <li>
+    <i>Memory:</i>
+        {{memory}}
+                </li>
+            </ul>
+        </div>
+        {{/with}}
+    <br>
+    
+       
+</details>
+
+        <div>
+        <ul> 
+            <p style="color:#E4E11D;"><b>Ports:</b></p> 
+                {{#each ports}}
+            </ul>
+            <ul>
+                <i>Type:</i>
+        {{type}}
+        </ul>
+        
+        <ul>
+          <i>Count:</i>
+        {{count}}
+        </ul>
+    </div>     
+     <br>
+    {{#if features}}
+
+    <span class="badge rounded-pill text-bg-secondary"> <i>Features:</i></span>
+               {{/if}}
+                {{#each features}}
+                <ul><li>{{this}}</li>  </ul>
+                 </div>
+    {{/each}}
+   </div>
+    {{/each}}
+ <br>
+  
+    
+    <div>
+        <ul>  
+            <span class="badge rounded-pill text-bg-dark"><i>Battery:</i></span>
+                {{#with battery}}
+            <li>
+    <i>Type:</i>
+        {{type}}
+                </li>
+                    <li>
+            <i>Capacity:</i>
+        {{capacity}}
+                </li>
+            <li>
+    <i>Life:</i>
+ {{life}}
+        </li>
+    </ul>
+</div>
+{{/with}}
+<div>
+    <ul><i>Weight:</i>
+        {{weight}}</ul></div>
+     
+        
+            <div>
+        <ul>  
+             <span class="badge rounded-pill text-bg-dark"><i>Dimensions:</i></span>
+            
+                {{#with dimensions}}
+            <li>
+    <i>Height:</i>
+        {{height}}
+                </li>
+                    <li>
+                    <i>Width:</i>
+                {{width}}
+                </li>
+                  <li>
+                    <i>Depth:</i>
+                {{depth}}
+                </li>
+            </ul>
+        </div>
+        {{/with}}
+   <br>
+<div>
+    <ul></ul>
+    <button type="button" class="btn btn-outline-warning">Operating System</button>
+       <h3><strong> ☞ macOS</strong></h3> 
+        </ul>
+    </div>
+</div>
+
+    <br>
+        <hr>
+            <br>
+            
+    <br>
+
+
+
+     <div>
+        <ul>  
+            <figure class="text-center">
+  <blockquote class="blockquote">
+    <h3> <p style="color:#13199C;">Accessories</p></h3>
+  </blockquote>
+        <br>
+        <br>
+                {{#each accessories}}
+             
+<ul>
+  <dl class="row">
+  <dt class="col-sm-3">Name:</dt>
+  <dd class="col-sm-9"><u>{{name}}</u></dd>
+
+  <dt class="col-sm-3">Price:</dt>
+  <dd class="col-sm-9"><b>{{price}}</b></dd>
+</ul>
+
+            {{/each}}
+         </div>
+    {{/with}}

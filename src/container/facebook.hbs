@@ -1,0 +1,303 @@
+<div>
+    <div>
+   <h1><p style="color:blue;"><b>Facebook</b></p></h1> 
+</div>
+<p style="color:blue;"><b>Users:</b></p>
+{{#each users}}
+
+
+<dl class="row">
+  <dt class="col-sm-3">ID:</dt>
+  <dd class="col-sm-9">{{id}}</dd>
+
+  <dt class="col-sm-3">Name:</dt>
+  <dd class="col-sm-9"><p><i>{{name}}</i></p>
+  </dd>
+
+  <dt class="col-sm-3">Gender:</dt>
+  <dd class="col-sm-9">{{gender}}</dd>
+
+  <dt class="col-sm-3 text-truncate">Age:</dt>
+  <dd class="col-sm-9">{{age}}</dd>
+    </dl>
+  </dd>
+</dl>
+
+
+   |<h3><button type="button" class="btn btn-outline-primary">Friends:</button></h3>
+{{#each friends}}
+<div>
+
+<dl class="row">
+  <dt class="col-sm-3">ID:</dt>
+  <dd class="col-sm-9">{{id}}</dd>
+
+  <dt class="col-sm-3">Name:</dt>
+  <dd class="col-sm-9"><p><i>{{name}}</i></p>
+  </dd>
+
+  <dt class="col-sm-3">Gender:</dt>
+  <dd class="col-sm-9">{{gender}}</dd>
+
+  <dt class="col-sm-3 text-truncate">Age:</dt>
+  <dd class="col-sm-9">{{age}}</dd>
+    </dl>
+  </dd>
+</dl>
+
+<div>
+     |<h3><button type="button" class="btn btn-outline-primary">Mutual friends:</button></h3>
+    
+</div>
+{{#each mutual_friends}}
+</div>
+
+<dl class="row">
+  <dt class="col-sm-3">ID:</dt>
+  <dd class="col-sm-9">{{id}}</dd>
+
+  <dt class="col-sm-3">Name:</dt>
+  <dd class="col-sm-9"><p><i>{{name}}</i></p>
+  </dd>
+
+  <dt class="col-sm-3">Gender:</dt>
+  <dd class="col-sm-9">{{gender}}</dd>
+
+  <dt class="col-sm-3 text-truncate">Age:</dt>
+  <dd class="col-sm-9">{{age}}</dd>
+    </dl>
+  </dd>
+</dl>
+{{/each}}
+
+<br>
+
+
+{{/each}}
+</div>
+
+<div>
+    |<h3><button type="button" class="btn btn-outline-primary">Groups:</button></h3>
+</div>
+<div>
+    {{#each groups}}
+</div>
+
+<dl class="row">
+  <dt class="col-sm-3">ID:</dt>
+  <dd class="col-sm-9">{{id}}</dd>
+
+  <dt class="col-sm-3">Name:</dt>
+  <dd class="col-sm-9"><p><i>{{name}}</i></p>
+  </dd>
+
+  <dt class="col-sm-3">Description::</dt>
+  <dd class="col-sm-9">{{description}}</dd>
+    </dl>
+  </dd>
+</dl>
+<div>
+
+<br>
+
+<div>
+    |<h3><button type="button" class="btn btn-outline-primary">Members:</button></h3>
+</div>
+{{#each members}}
+<div>
+   <dl class="row">
+  <dt class="col-sm-3">ID:</dt>
+  <dd class="col-sm-9">{{id}}</dd>
+
+  <dt class="col-sm-3">Name:</dt>
+  <dd class="col-sm-9"><p><i>{{name}}</i></p>
+  </dd>
+
+  <dt class="col-sm-3">Gender:</dt>
+  <dd class="col-sm-9">{{gender}}</dd>
+
+  <dt class="col-sm-3 text-truncate">Age:</dt>
+  <dd class="col-sm-9">{{age}}</dd>
+    </dl>
+  </dd>
+</dl>
+{{/each}}
+<br>
+<dl class="row">
+  <dt class="col-sm-3">ID:</dt>
+  <dd class="col-sm-9">{{id}}</dd>
+
+  <dt class="col-sm-3">Name:</dt>
+  <dd class="col-sm-9"><p><i>{{name}}</i></p>
+  </dd>
+
+  <dt class="col-sm-3">Description::</dt>
+  <dd class="col-sm-9">{{description}}</dd>
+    </dl>
+  </dd>
+</dl>
+<div>
+<br>
+
+<div>
+    <h3><button type="button" class="btn btn-outline-primary">Members:</button></h3>  
+</div>
+{{#each members}}
+<div>
+   <dl class="row">
+  <dt class="col-sm-3">ID:</dt>
+  <dd class="col-sm-9">{{id}}</dd>
+
+  <dt class="col-sm-3">Name:</dt>
+  <dd class="col-sm-9"><p><i>{{name}}</i></p>
+  </dd>
+
+  <dt class="col-sm-3">Gender:</dt>
+  <dd class="col-sm-9">{{gender}}</dd>
+
+  <dt class="col-sm-3 text-truncate">Age:</dt>
+  <dd class="col-sm-9">{{age}}</dd>
+    </dl>
+  </dd>
+</dl>
+{{/each}}
+
+</div>
+{{/each}}
+<br>
+<dl class="row">
+  <dt class="col-sm-3">ID:</dt>
+  <dd class="col-sm-9">{{id}}</dd>
+
+  <dt class="col-sm-3">Name:</dt>
+  <dd class="col-sm-9"><p><i>{{name}}</i></p>
+  </dd>
+
+  <dt class="col-sm-3 text-truncate">Age:</dt>
+  <dd class="col-sm-9">{{age}}</dd>
+    </dl>
+  </dd>
+</dl>
+<br>
+<div>
+    <h3><button type="button" class="btn btn-outline-primary">Friends:</button></h3>
+    </div>
+{{#each friends}}
+<dl class="row">
+  <dt class="col-sm-3">ID:</dt>
+  <dd class="col-sm-9">{{id}}</dd>
+
+  <dt class="col-sm-3">Name:</dt>
+  <dd class="col-sm-9"><p><i>{{name}}</i></p>
+  </dd>
+
+  <dt class="col-sm-3">Gender:</dt>
+  <dd class="col-sm-9">{{gender}}</dd>
+
+  <dt class="col-sm-3 text-truncate">Age:</dt>
+  <dd class="col-sm-9">{{age}}</dd>
+    </dl>
+  </dd>
+</dl>
+<br>
+<br>
+<div>
+    <h3><button type="button" class="btn btn-outline-primary">Mutual friends:</button></h3>
+</div>
+{{#each mutual_friends}}
+</div>
+
+<dl class="row">
+  <dt class="col-sm-3">ID:</dt>
+  <dd class="col-sm-9">{{id}}</dd>
+
+  <dt class="col-sm-3">Name:</dt>
+  <dd class="col-sm-9"><p><i>{{name}}</i></p>
+  </dd>
+
+  <dt class="col-sm-3">Gender:</dt>
+  <dd class="col-sm-9">{{gender}}</dd>
+
+  <dt class="col-sm-3 text-truncate">Age:</dt>
+  <dd class="col-sm-9">{{age}}</dd>
+    </dl>
+  </dd>
+</dl>
+{{/each}}
+
+<br>
+<br>
+<div>
+    {{#each mutual_friends}}
+</div>
+<dl class="row">
+  <dt class="col-sm-3">ID:</dt>
+  <dd class="col-sm-9">{{id}}</dd>
+
+  <dt class="col-sm-3">Name:</dt>
+  <dd class="col-sm-9"><p><i>{{name}}</i></p>
+  </dd>
+
+  <dt class="col-sm-3">Gender:</dt>
+  <dd class="col-sm-9">{{gender}}</dd>
+
+  <dt class="col-sm-3 text-truncate">Age:</dt>
+  <dd class="col-sm-9">{{age}}</dd>
+    </dl>
+  </dd>
+</dl>
+{{/each}}
+</div>
+
+<div>
+     <h3><button type="button" class="btn btn-outline-primary">Groups:</button></h3>
+</div>
+<div>
+    {{#each groups}}
+</div>
+<dl class="row">
+  <dt class="col-sm-3">ID:</dt>
+  <dd class="col-sm-9">{{id}}</dd>
+
+  <dt class="col-sm-3">Name:</dt>
+  <dd class="col-sm-9"><p><i>{{name}}</i></p>
+  </dd>
+
+  <dt class="col-sm-3">Description::</dt>
+  <dd class="col-sm-9">{{description}}</dd>
+    </dl>
+  </dd>
+</dl>
+<div>
+
+<br>
+
+<div>
+     <h3><button type="button" class="btn btn-outline-primary">Members:</button></h3>
+</div>
+{{#each members}}
+<dl class="row">
+  <dt class="col-sm-3">ID:</dt>
+  <dd class="col-sm-9">{{id}}</dd>
+
+  <dt class="col-sm-3">Name:</dt>
+  <dd class="col-sm-9"><p><i>{{name}}</i></p>
+  </dd>
+
+  <dt class="col-sm-3">Gender:</dt>
+  <dd class="col-sm-9">{{gender}}</dd>
+
+  <dt class="col-sm-3 text-truncate">Age:</dt>
+  <dd class="col-sm-9">{{age}}</dd>
+    </dl>
+  </dd>
+</dl>
+</div>
+</div>
+{{/each}}
+</div>
+{{/each}}
+</div>
+{{/each}}
+</div>
+{{/each}}
