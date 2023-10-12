@@ -1,0 +1,50 @@
+<main>
+    <div>
+        <p>Navigation:</p>
+        {{#with navigation}}
+        </div>
+
+    <div>
+        <p>Links:</p>
+         {{#each links}}
+    </div>
+
+     <div>
+         <a>Text:</a>
+         {{text}}
+     </div>
+        
+    <div>
+        <a>href:</a>
+         {{href}}
+    </div>
+
+         {{/each}}
+        </div>
+         
+          <div>
+        <p>Button:</p>
+        {{#with button}}
+        </div>
+        <div>
+         <a>Text:</a>
+         {{text}}
+     </div>
+      <div>
+         <a>href:</a>
+         {{href}}
+     </div>
+     {{/with}}
+
+<div>Header</div>
+{{#with header}}
+
+  <a>Title:</a>
+         {{title}}
+
+ <a>description:</a>
+         {{description}}
+       </div>
+
+     {{/with}}
+</main>
