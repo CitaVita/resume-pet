@@ -1,6 +1,6 @@
 <main>
     <div>
-        <p>Navigation:</p>
+     
         {{#with navigation}}
         </div>
 
@@ -10,12 +10,12 @@
     </div>
 
      <div>
-         <a>Text:</a>
+        
          {{text}}
      </div>
         
     <div>
-        <a>href:</a>
+   
          {{href}}
     </div>
 
@@ -27,24 +27,97 @@
         {{#with button}}
         </div>
         <div>
-         <a>Text:</a>
+    
          {{text}}
      </div>
       <div>
-         <a>href:</a>
+      
          {{href}}
      </div>
      {{/with}}
 
-<div>Header</div>
+
 {{#with header}}
 
-  <a>Title:</a>
+
          {{title}}
 
- <a>description:</a>
+
          {{description}}
        </div>
 
+{{#with button}}
+
+  <div>
+ 
+      {{text}}
+  </div>
+
+    <div>
+ 
+      {{link}}
+  </div>   
+{{/with}}
+</div>
+{{/with}}
+
+<a>City:</a>
+      {{#with city}}
+
+
+  {{title}}
+
+  <a>Cards:</a>
+{{#each cards}}
+
+
+  <a>Picture:</a>
+  {{#with picture}}
+
+  {{src}}
+
+  {{alt}}
+
+ 
+ {{title}}
+
+
+ {{description}}
+
+<a>Button:</a>
+
+      {{text}}
+  </div>
+
+<div>
+  
+      {{href}}
+  </div>
+{{/with}}
+
+  </div>
+{{/each}}
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
      {{/with}}
 </main>
