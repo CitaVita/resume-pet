@@ -3,96 +3,71 @@
 в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/summary"
 --}}
 
-<div>
+<div class="mb-5">
 	{{#with main}}
   <main>
-    <section>
+    <section class="mb-5">
       	{{> title data="Work history" big=true}}
 		   
     <div>
      <ul>
     	{{#each works}}
 <li>
-  <div>{{position}}</div>
+  <div class="mb-5">
+    {{position}}
+    </div>
+ <div>
+   {{duration.from}}
+      - 
+   {{#if duration.to}} 
+      {{duration.to}}
+        {{else}}
+          (still work here)
+        {{/if}}
+  </div>
+<div>
+    {{#if company.url}} 
+      {{> link href=company.url blank=true noLine=true text=company.name}}
+         {{else}}
+        <b>{{company.name}}</b>
+    {{/if}}
+</div>
+  <div>
+    <strong>Projects ({{projectAmount}})</strong>
+  </div>
+  <ul>
+    {{#each project}}
+      <li>
+     <div>{{> link text=name href=url blank=true noLine=true }}</div>
+     <div>
+      <a> {{about}}</a>
+    </div>
 
-        <br>
-
-            <div>
-              {{duration.from}}
-              - 
-              {{#if duration.to}} 
-               {{duration.to}}
-                {{else}}
-                (still work here)
-                 {{/if}}
-                 </div>
-
-              <br>
-       <div>
-                {{#if company.url}} 
-                {{> link href=company.url blank=true noLine=true text=company.name}}
-                {{else}}
-            <b>{{company.name}}</b>
-                 {{/if}}
-                 </div>
-                 
-              <br>
-              <br>
-
-              <div>
-                <strong>Projects ({{projectAmount}})</strong>
-              </div>
-             
-              <br>
-             
-              <ul>
-                {{#each project}}
-                <li>
-     
-                  <div>{{> link text=name href=url blank=true noLine=true }}</div>
-                  
-                  <div>
-                    <a>
-                      {{about}}
-                    </a>
-                  </div>
-
-                  <hr/>
-                  <br>
-
-                  <div>
-                    <em>Project stacks ({{stackAmount}}) </em>
-                  </div>
-
-                  <ul> 
-                   {{#each stacks}}
-                   <li>
-                  {{name}}
+        <hr/>
+      <div class="ps-5">
+        <em>Project stacks ({{stackAmount}}) </em>
+     </div>
+      <ul> 
+    {{#each stacks}}
+        <li>
+          {{name}}
                   </li>
-                   {{/each}}
-                   </ul>
-
-                  <br>
-
-                  <div>
-                    <em>Project awards ({{awardAmount}})</em>
-                  </div>
-
-                  <br>
-
-                  <ul>
-                  {{#each awards}}
-                  <li>
-                    {{name}}
-                    </li>
-                {{/each}}
-                  </ul>
-                {{/each}}
-              </ul>
-              </li>
-              <br>
-      {{/each}}
-      <br>
+        {{/each}}
+      </ul>
+<div class="ps-5">
+      <em>Project awards ({{awardAmount}})</em>
+</div>
+<ul>
+    {{#each awards}}
+ <li>
+      {{name}}
+  </li>
+  {{/each}}
+</ul>
+    {{/each}}
+</ul>
+</li>
+     {{/each}}
       </ul>
     </div>
 </section>
