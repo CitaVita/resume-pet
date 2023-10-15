@@ -1,0 +1,123 @@
+<main>
+    <div>
+     
+        {{#with navigation}}
+        </div>
+
+    <div>
+        <p>Links:</p>
+         {{#each links}}
+    </div>
+
+     <div>
+        
+         {{text}}
+     </div>
+        
+    <div>
+   
+         {{href}}
+    </div>
+
+         {{/each}}
+        </div>
+         
+          <div>
+        <p>Button:</p>
+        {{#with button}}
+        </div>
+        <div>
+    
+         {{text}}
+     </div>
+      <div>
+      
+         {{href}}
+     </div>
+     {{/with}}
+
+
+{{#with header}}
+
+
+         {{title}}
+
+
+         {{description}}
+       </div>
+
+{{#with button}}
+
+  <div>
+ 
+      {{text}}
+  </div>
+
+    <div>
+ 
+      {{link}}
+  </div>   
+{{/with}}
+</div>
+{{/with}}
+
+<a>City:</a>
+      {{#with city}}
+
+
+  {{title}}
+
+  <a>Cards:</a>
+{{#each cards}}
+
+
+  <a>Picture:</a>
+  {{#with picture}}
+
+  {{src}}
+
+  {{alt}}
+
+ 
+ {{title}}
+
+
+ {{description}}
+
+<a>Button:</a>
+
+      {{text}}
+  </div>
+
+<div>
+  
+      {{href}}
+  </div>
+{{/with}}
+
+  </div>
+{{/each}}
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+     {{/with}}
+</main>
