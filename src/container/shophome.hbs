@@ -1,0 +1,119 @@
+<main>
+{{#with navigation}}
+
+<div>{{#each links}}
+
+<div>{{text}}</div>
+
+<div>{{href}}</div>
+{{/each}}
+</div>
+{{/with}}
+
+
+{{#with newsBlock}}
+
+{{title}}
+
+<div>{{#each cards}}
+
+<div>{{title}}</div>
+<div>{{description}}
+
+    {{#if isTop includeZero=true}} ({{{isTop}}}) {{/if}}
+ {{#if isTop}} (TOP)  {{/if}}
+
+ {{#unless isNew includeZero=true}} (is not active) {{/unless}}
+{{isTop}}
+
+{{isNew}}
+</div>
+{{/each}}
+</div>
+{{/with}}
+
+<div>
+   {{#with goodsBlock}} 
+
+   <div>{{#each tabs}} 
+
+{{isActive}}
+
+{{isDisabled}}
+
+{{text}}
+</div>
+{{/each}}
+
+<div>
+{{#each cards}}
+
+<div>
+{{image}}
+
+{{title}}
+
+{{description}}
+
+{{isHot}}
+
+{{isNew}}
+</div>
+{{/each}}
+
+</div>
+{{/with}}
+
+
+<div>
+    {{#with subscribe}}
+
+{{header}}
+
+{{description}}
+
+{{#each buttons}}
+
+{{text}}
+
+{{link}}
+</div>
+</div>
+{{/each}}
+
+</div>
+{{/with}}
+
+
+<div>
+    {{#with service}}
+
+    {{title}}
+
+    {{description}}
+
+    {{#each buttons}}
+
+{{text}}
+
+{{link}}
+</div>
+{{/each}}
+</div>
+{{/with}}
+
+<div>{{#each footer}}
+{{#each this}}
+    {{text}}
+
+    {{link}}
+</div>
+{{/each}}
+
+</div>
+{{/each}}
+
+
+
+
+</main>
