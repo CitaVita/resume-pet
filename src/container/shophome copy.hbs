@@ -1,0 +1,154 @@
+<main>
+    <header>
+{{#with navigation}}
+    </header>
+
+
+<div>{{#each links}}
+
+<div>{{text}}</div>
+
+<div>{{href}}</div>
+{{/each}}
+</div>
+{{/with}}
+
+<div class="col-12 pe-5">
+    <div class="card">
+    <div class="pt-4 pb-3 px-4">
+    <div class="nav-item mb-2">
+        <div class="card">
+        <a href="{{href}}" class="nav-link">{{text}}</a>   
+    </div>
+    </div>
+    <br>
+     <div class="nav-item mb-2">
+         <div class="card">
+        <a href="{{href}}" class="nav-link active">{{text}}</a>   
+    </div>
+    </div>
+    <br>
+     <div class="nav-item mb-2">
+         <div class="card">
+        <a href="{{href}}" class="nav-link disabled">{{text}}</a>  
+        </div> 
+    </div>
+    </div>
+</div>
+</div>
+</div>
+
+
+
+
+
+{{#with newsBlock}}
+
+{{title}}
+
+<div>{{#each cards}}
+
+<div>{{title}}</div>
+<div>{{description}}
+
+    {{#if isTop includeZero=true}} ({{{isTop}}}) {{/if}}
+ {{#if isTop}} (TOP)  {{/if}}
+
+ {{#unless isNew includeZero=true}} (is not active) {{/unless}}
+{{isTop}}
+ {{#unless  isNew}} 
+    {{#if  isNew includeZero=true}}
+     (in process) 
+     {{/if}}
+     {{/unless}}
+{{isNew}}
+</div>
+{{/each}}
+</div>
+{{/with}}
+
+<div>
+   {{#with goodsBlock}} 
+
+   <div>{{#each tabs}} 
+
+{{isActive}}
+
+{{isDisabled}}
+
+{{text}}
+</div>
+{{/each}}
+
+<div>
+{{#each cards}}
+
+<div>
+{{image}}
+
+{{title}}
+
+{{description}}
+
+{{isHot}}
+
+{{isNew}}
+</div>
+{{/each}}
+
+</div>
+{{/with}}
+
+
+<div>
+    {{#with subscribe}}
+
+{{header}}
+
+{{description}}
+
+{{#each buttons}}
+
+{{text}}
+
+{{link}}
+</div>
+</div>
+{{/each}}
+
+</div>
+{{/with}}
+
+
+<div>
+    {{#with service}}
+
+    {{title}}
+
+    {{description}}
+
+    {{#each buttons}}
+
+{{text}}
+
+{{link}}
+</div>
+{{/each}}
+</div>
+{{/with}}
+
+<div>{{#each footer}}
+{{#each this}}
+    {{text}}
+
+    {{link}}
+</div>
+{{/each}}
+
+</div>
+{{/each}}
+
+
+
+
+</main>
