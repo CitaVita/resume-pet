@@ -1,0 +1,147 @@
+<header>
+    {{#with navigation}}
+     <div class="mb-5">
+         <div class="card p-2 row">
+                <nav class="nav d-flex">
+                 {{#each links}}
+                <a href="{{href}}" class="nav-link">{{text}}</a>   
+                 {{/each}}
+            <a href="#" class="nav-link disabled">Disabled</a> 
+        </nav>
+ </div> 
+ </div>
+{{/with}}
+</header>
+
+<main>
+    <section>
+         <div class="mb-5">
+        {{#with newsBlock}}
+        <div class="mb-3">
+            <h3 class="text-center">{{title}}</h3>
+            </div>
+     <div class="row gx-2 gy-3">
+         {{#each cards}}
+        <div class="col-3">
+            <div class="card text-bg-secondary">
+                <div class="card-header">
+                 {{title}}
+                    {{#if isTop}} <div class="badge text-bg-danger rounded-pill text-light">TOP</div>{{/if}}   
+                    {{#if isNew}} <div class="badge text-bg-success rounded-pill text-light">NEW</div>{{/if}}  
+                    </div>  
+                        <div class="card-body">
+                        <p class="text-light">{{description}}</p>
+                    </div>
+                 </div>
+             </div>
+        {{/each}}
+        </div>
+    {{/with}}
+    </div>
+ </section>
+    
+    <hr>
+
+<section>
+     {{#with goodsBlock}} 
+    	<div class="p-2 row">
+           <nav class="nav nav-tabs">
+             {{#each tabs}} 
+                <div class="nav-item">   
+                 {{#if isActive}}<a href="#" class="nav-link active">{{text}}</a>
+                 	{{else}} 
+                 			{{#if isDisabled}} <a href="#" class="nav-link disabled">{{text}}</a>
+                 	{{else}}
+                   <a href="#" class="nav-link">{{text}}</a>
+              {{/if}}
+              {{/if}}
+          </div>
+			{{/each}}
+  	</nav>
+</div>
+</section>
+
+<section>
+       <div class="mt-5 mb-5">
+           <div class="row gx-2 gy-4">	
+          {{#each cards}}
+					<div class="col-4">
+					   <div class="card text-bg-light">
+							  <img class="card-img-top" src="https://picsum.photos/400/200" alt="Product photo">
+                    <div class="card-header">
+                       <div class="card-body">
+                   <h6><p>{{title}}</p></h6>	 
+       						{{#if isHot}}<div class="badge text-bg-warning rounded-pill text-light text-uppercase">HOT!</div> 
+   								{{#if isNew}}<div class="badge text-bg-primary rounded-pill text-light text-uppercase">NEW</div>      
+							{{/if}} 
+						{{/if}} 
+						</div>
+				<p class="ms-3">{{description}}</p>
+				</div>
+			</div>
+		</div>
+	{{/each}}
+	</div>
+		</div>
+			</div>
+		{{/with}}
+</section>
+
+<hr>
+
+<section>
+	<div class="mt-5 mb-5">
+		<div class="card text-bg-secondary">
+			{{#with subscribe}}
+			<div class="card-header">
+				<h2><p class="ps-3">{{header}}</p></h2>
+					<div class="card-body">
+							<p class="ps-2">{{description}}</p>		
+								{{#each buttons}}
+							<div class="d-grid gap-2 d-md-block p-2">
+							<a href="{{link}}" class="btn btn-primary">{{text}}</a>
+							</div>
+					{{/each}}
+				</div>
+			</div>
+		{{/with}}
+		</div>
+	</div>
+</section>
+
+<hr>
+
+<section>
+	<div class="mt-5 mb-5">
+		<div class="card text-bg-success">
+		{{#with service}}
+			<div class="card-header">
+				<h2><p class="text-center">{{title}}</p></h2>
+					<div class="card-body text-center">
+							<p>{{description}}</p>		
+								{{#each buttons}}
+							<a href="{{link}}" class="btn btn-primary">{{text}}</a>
+						{{/each}}
+					</div>
+				</div>
+			{{/with}}
+		</div>
+	</div>
+</section>
+</main>
+
+<hr>
+
+<footer>
+  <nav class="nav">
+    {{#each footer}}
+      <div class="nav-item">
+        {{#each this}}
+          <a href="{{link}}" class="nav-link">{{text}}</a>	
+        {{/each}}
+					<a href="#" class="nav-link disabled">Disabled</a>
+      </div>
+    {{/each}}
+  </nav>
+</footer>
+
