@@ -1,303 +1,289 @@
-<main>
-{{#with navigation}}
-{{#each links}}
-{{text}}
-{{href}}
-
-{{/each}}
+<htnl>
+    <header>
+       <div>{{#with navigation}}
+        <a>{{#each links}} {{text}} {{href}}</a>
+            </div>
+         {{/each}}
+    </div>
 {{/with}}
 
-<header>
-    {{#with contacts_data}}
-    {{title}}
-
-    {{#each buttons}}
-   
-  {{#if isPrimary}} 
-   {{text}}
-  {{else}}
-  {{#if isOutline}} 
-   {{text}}
-  {{/if}}
-  {{/if}}
+  <strong>{{header}}</strong>
+    <div>{{#with contacts_data}}
+      <h2>{{title}}</h2>
+        <div>
+            <ul>
+            {{#each buttons}}
+          <div>{{#if isPrimary}} 
+         <b>{{text}}</b>
+         {{else}}
+          <div>{{#if isOutline}} 
+       <b>{{text}}</b> 
+       </ul>
+          </div>
+           {{/if}}
+        </div>
+       {{/if}}
+     </div>
   {{/each}}
-
-
-<div>
-{{#with form}}
-{{#with input}}
-
-
-{{#with surname}}
-{{label}}
-{{placeholder}}
-{{caption}}
+<div>{{#with form}}
+     <div>{{#with input}}
+      <div>{{#with surname}}
+         <label>{{label}}</label>
+            <b>{{placeholder}}</b>
+            <span>{{caption}}</span>
+         </div>
+        {{/with}}
+         <div>{{#with name}}
+                     <label>{{label}}</label>
+                <b>{{placeholder}}</b>
+            <span>{{caption}}</span>
+        </div>
+    {{/with}}
+     <div>{{#with phone}}
+      <label>{{label}}</label>
+        <b>{{placeholder}}</b>
+      <span>{{caption}}</span>
+      </div>
+   {{/with}}
+    <div>{{#with email}}
+        <label>{{label}}</label>
+        <b>{{placeholder}}</b>
+         <span>{{caption}}</span>
+        </div>
+        {{/with}}
+            </div>
+            {{/with}}
+            <div>{{#each switch}}
+                {{#if isActive}}{{text}}{{/if}}
+                </div>
+            {{/each}}
+        </div>
+    {{/with}}
+    </div>
 {{/with}}
-</div>
-
 <br>
-
-<div>
-{{#with name}}
-{{label}}
-{{placeholder}}
-{{caption}}
-{{/with}}
-</div>
-
-<br>
-
-<div>
-{{#with phone}}
-{{label}}
-{{placeholder}}
-{{caption}}
-{{/with}}
-</div>
-
-
-<br>
-
-<div>
-{{#with email}}
-{{label}}
-{{placeholder}}
-{{caption}}
-{{/with}}
-</div>
-
-<br>
-
-<div>{{#each switch}}
-
-{{#if isActive}}{{text}}{{/if}}
+</header>
+<body>
+  <div>{{#each action_block}}
+        <div>{{#if isSuccess}} {{text}} 
+          {{else}}
+             <div>{{#if isDanger}} {{text}} 
+             {{else}}
+          <div>{{#if isInfo}} {{text}} 
+            </div>
+              {{/if}}
+            </div>
+             {{/if}}
+         </div>
+     {{/if}}
+   </div>
 {{/each}}
+        
+<div>{{#with total}}
+   <title>{{title}}</title>
+    <li>{{#each item_list}}
+     {{name}} {{price}}
+    </li>
+   </div>
+{{/each}}
+
+<div>{{#each additional_info}} 
+    <li>{{text}} {{value}}</li>
+     </div>
+     {{/each}}
+       <div>{{#with total_price}}
+        <li>{{text}} {{value}}</li>
+       </div>
+  {{/with}} 
+
+<div>{{#each button}}
+
+<div>{{#if isPrimary}} {{text}}
+      {{else}}
+      <div>{{#if isOutline}} {{text}}
+         </div>
+         {{/if}}
+             </div>
+                   {{/if}}
+              </div>
+         {{/each}}
+     </div>
 {{/with}}
-</div>
-
-
-<div>
-{{#each action_block}}
-{{#if isSuccess}} {{text}} 
-{{else}}
-{{#if isDanger}} {{text}} 
-{{else}}
-{{#if isInfo}} {{text}} 
-{{/if}}
-{{/if}}
-{{/if}}
-{{/each}}
-</div>
 
 <br>
 
-<div>
-{{#with total}}
-{{title}}
-{{#each item_list}}
-{{name}} {{price}}
-{{/each}}
-</div>
-
-<br>
-
-<div>
-{{#each additional_info}}
-{{text}} {{value}}
-{{/each}}
-</div>
-
-<div>
-{{#with total_price}}
-{{text}}
-{{value}}
-{{/with}} 
-</div>
-
-<br>
-
-<div>
-{{#each button}}
-
-{{#if isPrimary}}{{text}}
-{{else}}
-{{#if isOutline}}{{text}}
-{{/if}}
-{{/if}}
-{{/each}}
-{{/with}}
-</div>
-
-<br>
-
-<div>
+<section>
+    <div>
     {{#with delivery}}
-    {{title}}
-    {{#each select}}
-    {{label}}
-    {{placeholder}}
-    {{#each options}}
-    {{value}} {{text}}
+        <h2>{{title}}</h2> 
+        {{#each select}}
+            <label>{{label}}</label> 
+                <b>{{placeholder}}</b>
+                <div>
+                    {{#each options}}
+                    {{value}} {{text}}
+                    </div>
+            {{/each}}
+            </div>
     {{/each}}
-     {{/with}}
-      {{/each}}
-</div>
+</section>
 
 <br>
 
 <div>
-    {{#each delivery_type}}
-    {{type}}
-    {{/each}}
-</div>
-
-<div>
-    {{#with payment}}
-    {{title}}
-    {{#each list}}
-    {{type}}
-    {{description}}
-    {{/each}}
-    {{/with}}
-</div>
-
-<br>
-
-<div>
-    {{#with contact}}
-    {{title}}
-    {{#with surname}}
-    {{label}}
-    {{placeholder}}
-    {{caption}}
-    {{/with}}
-</div>
-
-<div>
-    {{#with name}}
-    {{label}}
-    {{placeholder}}
-    {{caption}}
-    {{/with}}
-</div>
-
-
-<div>
-    {{#with phone}}
-    {{label}}
-    {{placeholder}}
-    {{caption}}
-    {{/with}}
-</div>
-
-<div>
-    {{#with email}}
-    {{label}}
-    {{placeholder}}
-    {{caption}}
-    {{/with}}
-</div>
+     {{#each delivery_type}} 
+     {{type}}
+ </div> 
+{{/each}}
+<div>{{#with payment}}
+    <title>{{title}}</title>
+        <div>
+            <li>{{#each list}}
+                {{type}}
+                {{description}}
+            </li> 
+        </div>
+     {{/each}}
+    </div>
 {{/with}}
 
-<div>
-    {{#with coment}}
-    {{label}}
-    {{placeholder}}
+<div>{{#with contact}}
+      <title>{{title}}</title>
+          <div>{{#with surname}}
+             <label>{{label}}</label>
+         <b>{{placeholder}}</b>
+    <snap>{{caption}}</snap>
     {{/with}}
 </div>
+
+<div>{{#with name}}
+      <label>{{label}}</label>
+         <b>{{placeholder}}</b> 
+        <snap>{{caption}}</snap>
+    </div>
 {{/with}}
 
-<br>
-<div>
-    {{#with coupon}}
-    {{title}}
-{{#with select}}
-{{#with availabel_coupon}}
-{{label}}
-    {{placeholder}}
-    {{#each options}}
-    {{value}} {{text}}
-    {{/each}}
-    {{/with}}
-</div>
+<div>{{#with phone}}
+    <label>{{label}}</label>
+       <b>{{placeholder}}</b>
+       <snap>{{caption}}</snap>
+    </div>
+{{/with}}
 
-<br>
-
-<div>
-    {{#with friend_coupon}}
-    {{label}}
-    {{placeholder}}
-     {{#each options}}
-    {{value}} {{text}}
-    {{/each}}
-    {{/with}}
-    {{/with}}
-</div>
-
-<br>
-<div>
-    {{#with add}}
-{{#with friend}}
-   {{label}}
-    {{placeholder}}
-    {{caption}}
-    {{/with}}
-</div>
-
-<div>
-    {{#with colleague}}
-   {{label}}
-    {{placeholder}}
-    {{caption}}
-    {{/with}}
+<div>{{#with email}}
+    <label>{{label}}</label>
+        <b>{{placeholder}}</b>
+         <snap>{{caption}}</snap>
+        </div>
      {{/with}}
-      {{/with}}
-</div>
+    </div>
+{{/with}}
 
-<br>
+<div>{{#with coment}}
+   <label>{{label}}</label> 
+    <b>{{placeholder}}</b>
+        </div>
+        {{/with}}
+    </div>
+{{/with}}
 
-<div>
-    {{#each quiz}}
-    {{title}}
-    {{#with preference}}
-    {{title}}
-    {{#each options}}
-    {{/each}}
+<div>{{#with coupon}}
+    <title>{{title}}</title>
+      <div>{{#with select}}
+           <div>{{#with availabel_coupon}}
+          <label>{{label}}</label>
+                <b>{{placeholder}}</b>
+          <select>{{#each options}}</select>
+              {{value}} {{text}}
+              </div>
+       {{/each}}
+    </div>
+{{/with}}
+
+<div>{{#with friend_coupon}}
+     <label>{{label}}</label>
+        <b>{{placeholder}}</b>
+             <select>{{#each options}}</select>
+                {{value}} {{text}}
+                 </div>
+            {{/each}}
+           </div>
+       {{/with}}
+    </header>
+{{/with}}
+
+<div>{{#with add}}
+    <div>{{#with friend}}
+            <label>{{label}}</label>
+            <b>{{placeholder}}</b>
+        <snap>{{caption}}</snap>
+    </div>
+{{/with}}
+
+<div>{{#with colleague}}
+   <label>{{label}}</label>
+        <b>{{placeholder}}</b>
+         <snap>{{caption}}</snap>  
+            </div>
+             {{/with}}
+            </div>
+        {{/with}}
+     </htnl>
     {{/with}}
 </div>
 
-<br>
+<div>
+    <div>{{#with quiz}}
+       <h2>{{title}}</h2>
+        <div>{{#with preference}}
+         <h2>{{title}}</h2>
+          {{#each options}}
+         </div>
+       {{/each}}
+     </div>
+   {{/with}}
+</div>
+
 <div>
     {{#with your_expirience}}
-    {{label}}
-    {{/with}}
-    {{#with purchase_frequency}}
-    {{label}}
-    {{paceholder}}
-    {{#each options}}
-    {{value}} {{text}}
-    {{/each}}
-    {{/with}}
+      <label>{{label}}</label>
+       </div>
+         {{/with}}
+           <div>{{#with purchase_frequency}}
+             <label>{{label}}</label>
+              <select>{{paceholder}}</select>
+              <div>{{#each options}}
+           {{value}} {{text}}
+         </div>
+      {{/each}}
+    </div>
+ {{/with}}
 </div>
 
 <div>
-    {{#with factors}}
-    {{title}}
-    {{#each options}}
-    {{/each}}
+    <div>{{#with factors}}
+        <h2>{{title}}</h2>
+         <div>{{#each options}}
+            </div>
+                 {{/each}}
+                </div>
+            {{/with}}
+        </div>
     {{/with}}
-     {{/with}}
-</div>
 </div>
 
-<br>
-</main>
+</body>
 
 <footer>
-        {{#each footer}}
-        {{#each this}}
-        {{text}}
-        {{link}}
+     <div>{{#each footer}}
+        <li>
+        <div>{{#each this}}
+            {{text}}
+               {{link}}
+             </li>
+            </div>
         {{/each}}
-        {{/each}}
+    </div>
+    {{/each}}
 </footer>
+</htnl>
