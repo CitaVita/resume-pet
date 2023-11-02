@@ -221,6 +221,7 @@
 <div class="mt-5">
   {{#with delivery}}
         <h2>{{title}}</h2>  
+        <div class="row">
             <div class="col-8">
                  <div class="card">
                      <div class="pt-3 pb-3 px-2">
@@ -228,7 +229,7 @@
                             {{#each select}}
                             <div class="col-4">
                                 <label class="form-label">{{label}}</label> 
-                             
+                             <div class="row">
                         <div class="col-4">
                     <select class="form-select form select-sm">
                 <option selected>{{placeholder}}</option>
@@ -239,11 +240,13 @@
                         </div>
                     </div> 
               {{/each}}
+              </div>
             </div>
         </div>
     <div>
 </div>
   </div>
+   </div>
    </div>
 
 <br>
@@ -285,6 +288,7 @@
          <h2>{{title}}</h2>
              <div class="col-4">
                 {{#with surname}}
+               
                     <label class="form-label">{{label}}</label>
                      </div>
 
@@ -309,6 +313,7 @@
 
                         <div class="col-4">
                     <label class="form-text text-sm">{{caption}}</label>
+            
                </div>
     {{/with}}      
  
@@ -342,7 +347,7 @@
                 <div class="col-4">
                     <label class="form-text text-sm">{{caption}}</label>   
                 </div>
-            
+           
         {{/with}}
      </div>
     {{/with}}
@@ -433,8 +438,9 @@
             <div class="col -12 mt-2">
                 {{#with preference}}
                 <div>{{title}}</div>
-          {{#each options}}
+         <div>{{#each options}}
            <div class="form-check">
+            <label class="form-label">{{this}}</label>
                   <input type="radio" class="form-check-input">
         </div>
        {{/each}}
@@ -442,46 +448,66 @@
    {{/with}}
 </div>
 
-<div>
+<div class="col-12 mt-3">
     {{#with your_expirience}}
-      <label>{{label}}</label>
-       </div>
+        <label class="form-label">{{label}}</label>
+        </div>
+        <div class="col-12">
+     <input class="form-control">
+</div>
          {{/with}}
+
+<div class="col-12 mt-3">
            <div>{{#with purchase_frequency}}
-             <label>{{label}}</label>
-              <select>{{paceholder}}</select>
+             <label class="form-label">{{label}}</label>
+             </div>
+              <select class="form-select">
+                <option selected>{{placeholder}}</option>
               <div>{{#each options}}
-           {{value}} {{text}}
+          <option value="{{value}}">{{text}}</option>  
          </div>
       {{/each}}
+      </select>
     </div>
  {{/with}}
 </div>
-
-<div>
-    <div>{{#with factors}}
-        <h2>{{title}}</h2>
-         <div>{{#each options}}
-            </div>
-                 {{/each}}
-                </div>
-            {{/with}}
-        </div>
-    {{/with}}
 </div>
 
+<div class="col-12">
+    <div>{{#with factors}}
+        <div>{{title}}</div>
+          <div class="col-12">
+            <div>{{#each options}}
+               <div class="form-check">
+                   <label class="form-check-label">{{this}}</label>
+                     <input type="checkbox" class="form-check-input">
+                       </div> 
+                    </div>
+                 {{/each}}
+                 </div>
+             </div>
+        {{/with}}
+     </div>
+{{/with}}
+ 
 </body>
 
+<hr>
+
+
+
 <footer>
-     <div>{{#each footer}}
-        <li>
-        <div>{{#each this}}
-            {{text}}
-               {{link}}
-             </li>
-            </div>
+   <footer>
+  <nav class="nav">
+    {{#each footer}}
+      <div class="nav-item">
+        {{#each this}}
+          <a href="{{link}}" class="nav-link">{{text}}</a>	
         {{/each}}
-    </div>
+					<a href="#" class="nav-link disabled">Disabled</a>
+      </div>
     {{/each}}
+  </nav>
 </footer>
+
 </htnl>
