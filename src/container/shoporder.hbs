@@ -1,0 +1,303 @@
+<main>
+{{#with navigation}}
+{{#each links}}
+{{text}}
+{{href}}
+
+{{/each}}
+{{/with}}
+
+<header>
+    {{#with contacts_data}}
+    {{title}}
+
+    {{#each buttons}}
+   
+  {{#if isPrimary}} 
+   {{text}}
+  {{else}}
+  {{#if isOutline}} 
+   {{text}}
+  {{/if}}
+  {{/if}}
+  {{/each}}
+
+
+<div>
+{{#with form}}
+{{#with input}}
+
+
+{{#with surname}}
+{{label}}
+{{placeholder}}
+{{caption}}
+{{/with}}
+</div>
+
+<br>
+
+<div>
+{{#with name}}
+{{label}}
+{{placeholder}}
+{{caption}}
+{{/with}}
+</div>
+
+<br>
+
+<div>
+{{#with phone}}
+{{label}}
+{{placeholder}}
+{{caption}}
+{{/with}}
+</div>
+
+
+<br>
+
+<div>
+{{#with email}}
+{{label}}
+{{placeholder}}
+{{caption}}
+{{/with}}
+</div>
+
+<br>
+
+<div>{{#each switch}}
+
+{{#if isActive}}{{text}}{{/if}}
+{{/each}}
+{{/with}}
+</div>
+
+
+<div>
+{{#each action_block}}
+{{#if isSuccess}} {{text}} 
+{{else}}
+{{#if isDanger}} {{text}} 
+{{else}}
+{{#if isInfo}} {{text}} 
+{{/if}}
+{{/if}}
+{{/if}}
+{{/each}}
+</div>
+
+<br>
+
+<div>
+{{#with total}}
+{{title}}
+{{#each item_list}}
+{{name}} {{price}}
+{{/each}}
+</div>
+
+<br>
+
+<div>
+{{#each additional_info}}
+{{text}} {{value}}
+{{/each}}
+</div>
+
+<div>
+{{#with total_price}}
+{{text}}
+{{value}}
+{{/with}} 
+</div>
+
+<br>
+
+<div>
+{{#each button}}
+
+{{#if isPrimary}}{{text}}
+{{else}}
+{{#if isOutline}}{{text}}
+{{/if}}
+{{/if}}
+{{/each}}
+{{/with}}
+</div>
+
+<br>
+
+<div>
+    {{#with delivery}}
+    {{title}}
+    {{#each select}}
+    {{label}}
+    {{placeholder}}
+    {{#each options}}
+    {{value}} {{text}}
+    {{/each}}
+     {{/with}}
+      {{/each}}
+</div>
+
+<br>
+
+<div>
+    {{#each delivery_type}}
+    {{type}}
+    {{/each}}
+</div>
+
+<div>
+    {{#with payment}}
+    {{title}}
+    {{#each list}}
+    {{type}}
+    {{description}}
+    {{/each}}
+    {{/with}}
+</div>
+
+<br>
+
+<div>
+    {{#with contact}}
+    {{title}}
+    {{#with surname}}
+    {{label}}
+    {{placeholder}}
+    {{caption}}
+    {{/with}}
+</div>
+
+<div>
+    {{#with name}}
+    {{label}}
+    {{placeholder}}
+    {{caption}}
+    {{/with}}
+</div>
+
+
+<div>
+    {{#with phone}}
+    {{label}}
+    {{placeholder}}
+    {{caption}}
+    {{/with}}
+</div>
+
+<div>
+    {{#with email}}
+    {{label}}
+    {{placeholder}}
+    {{caption}}
+    {{/with}}
+</div>
+{{/with}}
+
+<div>
+    {{#with coment}}
+    {{label}}
+    {{placeholder}}
+    {{/with}}
+</div>
+{{/with}}
+
+<br>
+<div>
+    {{#with coupon}}
+    {{title}}
+{{#with select}}
+{{#with availabel_coupon}}
+{{label}}
+    {{placeholder}}
+    {{#each options}}
+    {{value}} {{text}}
+    {{/each}}
+    {{/with}}
+</div>
+
+<br>
+
+<div>
+    {{#with friend_coupon}}
+    {{label}}
+    {{placeholder}}
+     {{#each options}}
+    {{value}} {{text}}
+    {{/each}}
+    {{/with}}
+    {{/with}}
+</div>
+
+<br>
+<div>
+    {{#with add}}
+{{#with friend}}
+   {{label}}
+    {{placeholder}}
+    {{caption}}
+    {{/with}}
+</div>
+
+<div>
+    {{#with colleague}}
+   {{label}}
+    {{placeholder}}
+    {{caption}}
+    {{/with}}
+     {{/with}}
+      {{/with}}
+</div>
+
+<br>
+
+<div>
+    {{#each quiz}}
+    {{title}}
+    {{#with preference}}
+    {{title}}
+    {{#each options}}
+    {{/each}}
+    {{/with}}
+</div>
+
+<br>
+<div>
+    {{#with your_expirience}}
+    {{label}}
+    {{/with}}
+    {{#with purchase_frequency}}
+    {{label}}
+    {{paceholder}}
+    {{#each options}}
+    {{value}} {{text}}
+    {{/each}}
+    {{/with}}
+</div>
+
+<div>
+    {{#with factors}}
+    {{title}}
+    {{#each options}}
+    {{/each}}
+    {{/with}}
+     {{/with}}
+</div>
+</div>
+
+<br>
+</main>
+
+<footer>
+        {{#each footer}}
+        {{#each this}}
+        {{text}}
+        {{link}}
+        {{/each}}
+        {{/each}}
+</footer>
