@@ -59,12 +59,18 @@
                 </div>
                
                
-                <div class="footer col-2">
+                <div class="footer col-2 d-grid gap-2 mb-3">
                   {{#each buttons}}
-                 <button class="btn btn-primary{{#if isPrimary}}primary{{/if}}">{{text}}</button> 
-                <button class="btn btn-outline-danger{{#if isDanger}}danger{{/if}}">{{text}}</button>
+                  {{#if isPrimary}}
+                 <button class="btn btn-primary">{{text}}</button> 
+                 {{else}}
+                 {{#if isDanger}}
+                <button class="btn btn-outline-danger">{{text}}</button>
           </div>
-          </div>
+          {{/if}}
+           </div>
+          {{/if}}
+         
             
          {{/each}}
    </div>
@@ -76,6 +82,97 @@
 {{/each}}
 </div>
 
+<hr>
+<div class="ms-2 mt-5 mb-5">
+    {{#with total}}
+        <h3>{{title}}</h3>
+            <h3>{{amount}}</h3>
+                <div>{{delivery}}</div>
+                   <div class="d-grid gap-3 mt-3">{{#each buttons}}
+               <div> {{#if isSuccess}}
+            <a href="{{link}}" class="btn btn-success">{{text}}</a>
+        {{else}}
+           <div> {{#if isOutline}}
+            <a href="{{link}}" class="btn btn-outline-success">{{text}}</a>       
+                 </div>
+                    {{/if}} 
+                        </div>
+                    {{/if}}
+                </div>
+            {{/each}}
+        </div>
+    {{/with}}
 
+<hr>
 
+<div class="mt-5 mb-3">
+    {{#with goodsOtherBlock}}
+    <div class="text-center">
+    <h3>{{title}}</h3>
+</div>
+</div>
+
+<section>
+<div class="mt-5 mb-5">
+<div class="row gx-2 gy-4">	
+{{#each cards}}
+        <div class="col-4">
+            <div class="card mb-5">
+                 <img src="{{image}}" alt="photos">
+                 <div class="card-title">
+                    <h5><p>{{title}}</p></h5>
+                       <div> {{#if isHot}}
+                        <button class="btn btn-warning rounded-pill text-uppercase btn-sm">hot</button>
+                         {{else}}
+                       <div>{{#if isNew}}
+                        <button class="btn btn-primary rounded-pill text-uppercase btn-sm">new</button>
+                     </div>
+                        {{/if}}
+                     </div>
+                     {{/if}}
+                    </div>                    
+                     <p class="card-text">{{description}}</p>    
+                    </div>
+                </div>
+              </div> 
+            {{/each}}       
+        </div>
+        </div>
+     {{/with}}
+
+        <hr>
+        <section>
+<div class="mt-5 mb-5"> 
+       <div class="card text-bg-secondary">
+          {{#with subscribe}}
+        <div class="card-header">
+            <h3> <p class="ps-0">{{header}}</p></h3>
+            <div class="card-body">
+            	<p class="ps-0">{{description}}</p>
+                {{#each buttons}}
+              	<div class="d-grid gap-1 d-md-block p-2">
+                     <a href="{{link}}" class="btn btn-primary">{{text}}</a>
+                     </div>
+                     {{/each}}
+                 </div> 
+             </div>
+            {{/with}}
+       </div> 
+         </div>  
+         </section> 
+       <hr>
+    <footer>
+         <nav class="nav">
+         {{#each footer}}
+        <div class="nav-item">
+         {{#each this}}
+            <a href="{{link}}" class="nav-link">{{text}}</a>
+         {{/each}}
+        <a href="#" class="nav-link disabled">Disabled</a>
+    </div>
+   {{/each}}
+   </nav>
+</footer>
+
+ 
 </html>
