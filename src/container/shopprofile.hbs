@@ -1,0 +1,53 @@
+<html>
+     <div class="header">
+          {{#with navigation}}
+          <div class="m-5">
+                <div class="card p-2 row">
+                    <nav class="nav d-flex">
+                    {{#each links}}
+                        <a href="{{href}}" class="nav-link">{{text}}</a>
+                        {{/each}}
+                    <a href="#" class="nav-link disabled">Disabled</a>
+                    </nav>
+                </div>  
+            </div> 
+        {{/with}}
+
+<header>
+    <div class="m-5 mb-3">
+       <h3>{{header}}</h3>
+    </div>
+
+      {{#with purchase}}
+<div class="row">
+  <div class="col-12 mb-5">
+    {{#each tabs}}
+     <div class="nav nav-tabs">
+         <div class="nav-item">
+             <a href="#" class="nav-link">{{tabs}}</a>  
+         </div>
+     </div>
+  </div>
+
+</div>
+   
+ 
+   <section>
+    <div class="p-5">
+        <div class="row g-5">
+            <div class="col-12">
+                <div>
+                      {{#with actionBlock}}
+                    <label class="form-label">{{placeholder.input}}</label>
+                    <input class="form-control">
+
+                </div>
+            </div>
+   {{#with input}}
+  
+</header>
+
+
+
+
+</html>
