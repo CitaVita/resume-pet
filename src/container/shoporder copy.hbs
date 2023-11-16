@@ -1,0 +1,289 @@
+<htnl>
+    <header>
+       <div>{{#with navigation}}
+        <a>{{#each links}} {{text}} {{href}}</a>
+            </div>
+         {{/each}}
+    </div>
+{{/with}}
+
+  <strong>{{header}}</strong>
+    <div>{{#with contacts_data}}
+      <h2>{{title}}</h2>
+        <div>
+            <ul>
+            {{#each buttons}}
+          <div>{{#if isPrimary}} 
+         <b>{{text}}</b>
+         {{else}}
+          <div>{{#if isOutline}} 
+       <b>{{text}}</b> 
+       </ul>
+          </div>
+           {{/if}}
+        </div>
+       {{/if}}
+     </div>
+  {{/each}}
+<div>{{#with form}}
+     <div>{{#with input}}
+      <div>{{#with surname}}
+         <label>{{label}}</label>
+            <b>{{placeholder}}</b>
+            <span>{{caption}}</span>
+         </div>
+        {{/with}}
+         <div>{{#with name}}
+                     <label>{{label}}</label>
+                <b>{{placeholder}}</b>
+            <span>{{caption}}</span>
+        </div>
+    {{/with}}
+     <div>{{#with phone}}
+      <label>{{label}}</label>
+        <b>{{placeholder}}</b>
+      <span>{{caption}}</span>
+      </div>
+   {{/with}}
+    <div>{{#with email}}
+        <label>{{label}}</label>
+        <b>{{placeholder}}</b>
+         <span>{{caption}}</span>
+        </div>
+        {{/with}}
+            </div>
+            {{/with}}
+            <div>{{#each switch}}
+                {{#if isActive}}{{text}}{{/if}}
+                </div>
+            {{/each}}
+        </div>
+    {{/with}}
+    </div>
+{{/with}}
+<br>
+</header>
+<body>
+  <div>{{#each action_block}}
+        <div>{{#if isSuccess}} {{text}} 
+          {{else}}
+             <div>{{#if isDanger}} {{text}} 
+             {{else}}
+          <div>{{#if isInfo}} {{text}} 
+            </div>
+              {{/if}}
+            </div>
+             {{/if}}
+         </div>
+     {{/if}}
+   </div>
+{{/each}}
+        
+<div>{{#with total}}
+   <title>{{title}}</title>
+    <li>{{#each item_list}}
+     {{name}} {{price}}
+    </li>
+   </div>
+{{/each}}
+
+<div>{{#each additional_info}} 
+    <li>{{text}} {{value}}</li>
+     </div>
+     {{/each}}
+       <div>{{#with total_price}}
+        <li>{{text}} {{value}}</li>
+       </div>
+  {{/with}} 
+
+<div>{{#each button}}
+
+<div>{{#if isPrimary}} {{text}}
+      {{else}}
+      <div>{{#if isOutline}} {{text}}
+         </div>
+         {{/if}}
+             </div>
+                   {{/if}}
+              </div>
+         {{/each}}
+     </div>
+{{/with}}
+
+<br>
+
+<section>
+    <div>
+    {{#with delivery}}
+        <h2>{{title}}</h2> 
+        {{#each select}}
+            <label>{{label}}</label> 
+                <b>{{placeholder}}</b>
+                <div>
+                    {{#each options}}
+                    {{value}} {{text}}
+                    </div>
+            {{/each}}
+            </div>
+    {{/each}}
+</section>
+
+<br>
+
+<div>
+     {{#each delivery_type}} 
+     {{type}}
+ </div> 
+{{/each}}
+<div>{{#with payment}}
+    <title>{{title}}</title>
+        <div>
+            <li>{{#each list}}
+                {{type}}
+                {{description}}
+            </li> 
+        </div>
+     {{/each}}
+    </div>
+{{/with}}
+
+<div>{{#with contact}}
+      <title>{{title}}</title>
+          <div>{{#with surname}}
+             <label>{{label}}</label>
+         <b>{{placeholder}}</b>
+    <snap>{{caption}}</snap>
+    {{/with}}
+</div>
+
+<div>{{#with name}}
+      <label>{{label}}</label>
+         <b>{{placeholder}}</b> 
+        <snap>{{caption}}</snap>
+    </div>
+{{/with}}
+
+<div>{{#with phone}}
+    <label>{{label}}</label>
+       <b>{{placeholder}}</b>
+       <snap>{{caption}}</snap>
+    </div>
+{{/with}}
+
+<div>{{#with email}}
+    <label>{{label}}</label>
+        <b>{{placeholder}}</b>
+         <snap>{{caption}}</snap>
+        </div>
+     {{/with}}
+    </div>
+{{/with}}
+
+<div>{{#with coment}}
+   <label>{{label}}</label> 
+    <b>{{placeholder}}</b>
+        </div>
+        {{/with}}
+    </div>
+{{/with}}
+
+<div>{{#with coupon}}
+    <title>{{title}}</title>
+      <div>{{#with select}}
+           <div>{{#with availabel_coupon}}
+          <label>{{label}}</label>
+                <b>{{placeholder}}</b>
+          <select>{{#each options}}</select>
+              {{value}} {{text}}
+              </div>
+       {{/each}}
+    </div>
+{{/with}}
+
+<div>{{#with friend_coupon}}
+     <label>{{label}}</label>
+        <b>{{placeholder}}</b>
+             <select>{{#each options}}</select>
+                {{value}} {{text}}
+                 </div>
+            {{/each}}
+           </div>
+       {{/with}}
+    </header>
+{{/with}}
+
+<div>{{#with add}}
+    <div>{{#with friend}}
+            <label>{{label}}</label>
+            <b>{{placeholder}}</b>
+        <snap>{{caption}}</snap>
+    </div>
+{{/with}}
+
+<div>{{#with colleague}}
+   <label>{{label}}</label>
+        <b>{{placeholder}}</b>
+         <snap>{{caption}}</snap>  
+            </div>
+             {{/with}}
+            </div>
+        {{/with}}
+     </htnl>
+    {{/with}}
+</div>
+
+<div>
+    <div>{{#with quiz}}
+       <h2>{{title}}</h2>
+        <div>{{#with preference}}
+         <h2>{{title}}</h2>
+          {{#each options}}
+         </div>
+       {{/each}}
+     </div>
+   {{/with}}
+</div>
+
+<div>
+    {{#with your_expirience}}
+      <label>{{label}}</label>
+       </div>
+         {{/with}}
+           <div>{{#with purchase_frequency}}
+             <label>{{label}}</label>
+              <select>{{paceholder}}</select>
+              <div>{{#each options}}
+           {{value}} {{text}}
+         </div>
+      {{/each}}
+    </div>
+ {{/with}}
+</div>
+
+<div>
+    <div>{{#with factors}}
+        <h2>{{title}}</h2>
+         <div>{{#each options}}
+            </div>
+                 {{/each}}
+                </div>
+            {{/with}}
+        </div>
+    {{/with}}
+</div>
+
+</body>
+
+<footer>
+     <div>{{#each footer}}
+        <li>
+        <div>{{#each this}}
+            {{text}}
+               {{link}}
+             </li>
+            </div>
+        {{/each}}
+    </div>
+    {{/each}}
+</footer>
+</htnl>
