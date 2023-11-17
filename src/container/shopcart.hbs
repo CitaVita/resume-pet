@@ -30,59 +30,43 @@
 
 <hr>
 
-<div class="card mt-5">
-   <div class="row">
-        <div class="header ps-2">
-           
-            {{#each goodsBlock}}
-            <div>{{#with this}}
-        <img class="col-2 mt-2 ps-2" src="{{image}}" alt="photos">
+ {{#each goodsBlock}}
+     <div class="card my-3">
          <div class="row">
-                     <div class="body col-6">
-                           <h4><p>{{name}}</p></h4>
-                           <p>{{description}}</p>
-                        </div>
+         <div class="col-2">
+             <img class="card-img" src="{{image}}" alt="photos">
+             </div>
+                <div class="col-4">
+                <h4><p>{{name}}</p></h4>
+                  <p>{{description}}</p>
+                    </div>
                 
                         
-                        <div class="col-1">
+                        <div class="col-2">
                             <p>{{price.title}}</p>
+                            <h4><p>{{price.value}}</p></h4>
                         </div>
-                         
-                          
-                        <div class="col-1">
-                           <h4><p>{{price.value}}</p></h4>
-                        </div>
-              
                       
                     <div class="col-2">
                      <p class="text-lg">{{amount}}</p>
                 </div>
-               
-               
-                <div class="footer col-2 d-grid gap-2 mb-3">
-                  {{#each buttons}}
-                  {{#if isPrimary}}
-                 <button class="btn btn-primary">{{text}}</button> 
-                 {{else}}
-                 {{#if isDanger}}
-                <button class="btn btn-outline-danger">{{text}}</button>
-          </div>
-          {{/if}}
-           </div>
-          {{/if}}
-         
-            
-         {{/each}}
-   </div>
-</div>
+                 
+<div class="col-2">
+     {{#each buttons}}
+         {{#if isPrimary}}
+            <button class="btn btn-primary">{{text}}</button> 
+            {{/if}}
+             {{#if isDanger}}
+             <button class="btn btn-outline-danger">{{text}}</button>
+            {{/if}}
+        {{/each}}
     </div>
-      </div>
-      </div>
-      {{/with}}   
+    </div>
+    </div>
 {{/each}}
-</div>
 
 <hr>
+
 <div class="ms-2 mt-5 mb-5">
     {{#with total}}
         <h3>{{title}}</h3>
@@ -113,34 +97,30 @@
 </div>
 
 <section>
-<div class="mt-5 mb-5">
-<div class="row gx-2 gy-4">	
-{{#each cards}}
-        <div class="col-4">
-            <div class="card mb-5">
-                 <img src="{{image}}" alt="photos">
+    <div class="mt-5 mb-5">
+        <div class="row g-3">	
+        {{#each cards}}
+            <div class="card col-4 mb-5">
+                 <img  class="card-img-top"src="{{image}}" alt="photos">
                  <div class="card-title">
                     <h5><p>{{title}}</p></h5>
-                       <div> {{#if isHot}}
-                        <button class="btn btn-warning rounded-pill text-uppercase btn-sm">hot</button>
-                         {{else}}
-                       <div>{{#if isNew}}
-                        <button class="btn btn-primary rounded-pill text-uppercase btn-sm">new</button>
-                     </div>
+                      {{#if isHot}}
+                        <span class="btn btn-warning rounded-pill text-uppercase btn-sm">hot</span>
                         {{/if}}
-                     </div>
+                       {{#if isNew}}
+                        <span class="btn btn-primary rounded-pill text-uppercase btn-sm">new</span>
                      {{/if}}
                     </div>                    
                      <p class="card-text">{{description}}</p>    
                     </div>
-                </div>
-              </div> 
-            {{/each}}       
+            {{/each}}  
+         </div>     
         </div>
-        </div>
-     {{/with}}
+    </div>
+{{/with}}
 
-        <hr>
+<hr>
+
         <section>
 <div class="mt-5 mb-5"> 
        <div class="card text-bg-secondary">
@@ -164,11 +144,12 @@
     <footer>
          <nav class="nav">
          {{#each footer}}
-        <div class="nav-item">
+        <div class="nav-item col-2">
          {{#each this}}
-            <a href="{{link}}" class="nav-link">{{text}}</a>
+            <a href="{{link}}" class="nav-link {{#if @last}}
+            disabled{{/if}}">{{text}}</a>
          {{/each}}
-        <a href="#" class="nav-link disabled">Disabled</a>
+    
     </div>
    {{/each}}
    </nav>

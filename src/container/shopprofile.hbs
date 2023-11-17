@@ -1,19 +1,17 @@
-<html>
-     <div class="header">
+
+ <header>
           {{#with navigation}}
-          <div class="m-5">
-                <div class="card p-2 row">
-                    <nav class="nav d-flex">
+                <div class="card">
+                    <nav class="nav">
                     {{#each links}}
                         <a href="{{href}}" class="nav-link">{{text}}</a>
                         {{/each}}
                     <a href="#" class="nav-link disabled">Disabled</a>
                     </nav>
                 </div>  
-            </div> 
         {{/with}}
+</header>
 
-<header>
     <div class="m-5 mb-3">
        <h3>{{header}}</h3>
     </div>
@@ -21,11 +19,13 @@
       {{#with purchase}}
 <div class="row">
   <div class="col-12 mb-5">
-    {{#each tabs}}
+ 
      <div class="nav nav-tabs">
+           {{#each tabs}}
          <div class="nav-item">
-             <a href="#" class="nav-link">{{tabs}}</a>  
+             <a href="#" class="nav-link {{#if @first}}active{{/if}}">{{this}}</a>  
          </div>
+         {{/each}}
      </div>
   </div>
 
@@ -44,10 +44,10 @@
                 </div>
             </div>
    {{#with input}}
-  
-</header>
+  {{/with}}
+  {{/with}}
+
+{{/with}}
 
 
 
-
-</html>
