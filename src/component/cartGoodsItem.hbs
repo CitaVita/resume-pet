@@ -1,18 +1,19 @@
-<section>
-	<div class="mt-5 mb-5">
-		<div class="card text-bg-success">
-		{{#with service}}
-			<div class="card-header">
-				<h2><p class="text-center">{{title}}</p></h2>
-					<div class="card-body text-center">
-							<p>{{description}}</p>		
-								{{#each buttons}}
-							<a href="{{link}}" class="btn btn-primary">{{text}}</a>
-						{{/each}}
-					</div>
-				</div>
-			{{/with}}
-		</div>
-	</div>
-</section>
-</main>
+<div class="ms-2 mt-5 mb-5">
+    {{#with total}}
+        <h3>{{title}}</h3>
+            <h3>{{amount}}</h3>
+                <div>{{delivery}}</div>
+                   <div class="d-grid gap-3 mt-3">{{#each buttons}}
+               <div> {{#if isSuccess}}
+            <a href="{{link}}" class="btn btn-success">{{text}}</a>
+        {{else}}
+           <div> {{#if isOutline}}
+            <a href="{{link}}" class="btn btn-outline-success">{{text}}</a>       
+                 </div>
+                    {{/if}} 
+                        </div>
+                    {{/if}}
+                </div>
+            {{/each}}
+        </div>
+    {{/with}}
