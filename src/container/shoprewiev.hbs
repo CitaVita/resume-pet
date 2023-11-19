@@ -23,6 +23,16 @@
         {{/with}}
 
 {{#with actionBlock}}
+<div class="col-8">
+    <div class="nav-tabs">
+        {{#each tabs}}
+        <div class="nav-item">
+            {{#if isActive}}
+            <a href="#" class="nav-link">{{text}}</a>
+        </div>
+        {{/each}}
+    </div>
+</div>
 
 {{/with}}
     </div>
