@@ -1,0 +1,39 @@
+<header>
+    {{#with navigation}}
+    <div class="card mb-5">
+        <div class="p-2 row">
+        <nav class="nav d-flex">
+            {{#each links}}
+            <a href="{{href}}" class="nav-link">{{text}}</a>
+            {{/each}}
+            <a href="#" class="nav-link disabled">Disabled</a>
+        </nav>
+    </div>
+    </div>
+    {{/with}}
+</header>
+
+<div class="mb-5 mt-5">
+    {{#with formBlock}}
+    <div class="col-8">
+        <h4><p>{{header}}</p></h4>
+        {{#with rating}}
+        <p>{{rating.title}}</p>
+        <p>{{rating.value}}</p>
+        {{/with}}
+
+{{#with actionBlock}}
+<div class="col-8">
+    <div class="nav-tabs">
+        {{#each tabs}}
+        <div class="nav-item">
+            {{#if isActive}}
+            <a href="#" class="nav-link">{{text}}</a>
+        </div>
+        {{/each}}
+    </div>
+</div>
+
+{{/with}}
+    </div>
+</div>
