@@ -2322,7 +2322,7 @@ router.get('/shoprewiev', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('git ', {
+  res.render('shoprewiev', {
     // layout: 'shop',
     navigation: {
       links: [
