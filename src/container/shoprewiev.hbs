@@ -20,20 +20,30 @@
         {{#with rating}}
         <p>{{rating.title}}</p>
         <p>{{rating.value}}</p>
+        </div>
         {{/with}}
 
-{{#with actionBlock}}
+
 <div class="col-8">
+    {{#with actionBlock}}
     <div class="nav-tabs">
         {{#each tabs}}
         <div class="nav-item">
             {{#if isActive}}
             <a href="#" class="nav-link">{{text}}</a>
+            {{/if}}
         </div>
         {{/each}}
     </div>
 </div>
+<div class="card col-8">
+    {{#with report}}
+        <h3><p>{{title}}</p></h3>
+            {{#with button}}
+             <a href="{{link}}" class="btn btn-secondary">{{text}}</a>
+            {{/with}}
+            
+     {{/with}}
 
+ </div>
 {{/with}}
-    </div>
-</div>
