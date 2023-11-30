@@ -27,30 +27,32 @@
     </div>  
 
 <div class="mt-5 mb-5">
-     <h4><p>{{header}}</p></h4>
+     <h4>{{header}}</h4>
 </div>
 
 <div class="row">
-<div class="mt-5 mb-5">
-    <div class="col-6">
+  
         {{#each sortBlock}}
-            <label class="form-label">
+        <div class="col-3">
                 <select class="form-select form-select-sm">
                     <option selected>{{placeholder}}</option>
                          {{#each options}}
-                            <option>{{value}}</option>
-                            <option>{{text}}</option>
+                            <option value="{{value}}"></option>
+                           {{text}}</option>
                         {{/each}}
                 </select>
-            </label>
+                </div>
         {{/each}}
     </div>
-</div>
-</div>
+
+<br>
+
+<div class="row">
+     {{#with filterBlock}}
 
 <div class="card col-4">
 <div class="mt-3 mb-3">
-    {{#with filterBlock.sellers}}
+   {{#with sellers}}
         <label class="form-label">{{title}}</label>
             <div class="form-check">
                   {{#each list}}
@@ -60,33 +62,30 @@
             </div>
     {{/with}}
 </div>
-</div>
-
-<div class="col-4"><hr></div>
-
-<div class="col-4">
-    {{#with filterBlock.brands}}
+<hr>
+    {{#with brands}}
         <label class="form-label">{{title}}</label>
         {{#with input}}
             <input type="text" placeholder="{{placeholder}}" class="form-control me-auto">   
         {{/with}}
-        <div class="col-1">
+        
             {{#each options}}
+            <div>
                 <input type="checkbox" class="form-check-input">
                 <label class="form-check-label">{{value}}</label>
+            </div>
              {{/each}}
-        </div>
+     
+{{/with}}
 
-
-
-<div class="col-4"><hr></div>
+<hr>
 
 
  {{#with price}}
     <label class="form-label">{{title}}</label>
         {{#with range}}
          <div class="row g-3">
-            <div class="col-4">
+            <div>
                 <input type="text" class="form-control" placeholder="{{from}}" aria-label="{{from}}">
            </div>
             <div class="col-4">
@@ -98,47 +97,36 @@
             {{#with button}}
                 <a href="{{link}}" class="btn btn-outline-dark">{{text}}</a>
             {{/with}}
+        
 {{/with}}
-</div>
 
-<div class="col-4"><hr></div>
 
-<div class="col-4">
-    <div class="row">
+<hr>
     {{#each filterList}}
      <div class="form-check">
         <label class="form-check-label">{{title}}</label>
-            <div class="col-1">
+      
                 {{#each options}}
+                <div>
                      <input type="checkbox" class="form-check-input">
                      
                     <label class="form-check-label">{{value}}</label>
                 </div>
                 {{/each}}
-            </div>
-</div>
-</div>
-   <div class="col-4"><hr></div>
-
-<div class="col-4">
-    <label class="form-label">{{title}}</label>
-            {{#each options}}
-                     <input type="checkbox" class="form-check-input">
-                     <label class="form-check-label">{{value}}</label>
-            {{/each}}
-</div>
- 
+          </div>
      {{/each}}
 </div>
 {{/with}}
-<div class="row">
-<div class="card">
-         {{#each goodsList}}
-        <div class="card-header col-4">
-           <img class="card-img-top" src="{{img}}" alt="photos">
-            </div>
 
-            <div class="card-title col-4">
+<div class="col-8">
+    <div class="row">
+
+         {{#each goodsList}}
+        <div class="card col-6">
+           <img class="card-img-top" src="{{img}}" alt="photos">
+           
+
+            <div class="card-title">
                 {{#if isHot}}
                 <snap class="badge text-bg-warning rounded-pill text-uppercase">Hot</snap>
                 {{/if}}
@@ -168,10 +156,10 @@
     {{/with}}
 </div>
 
-<p><h3>{{price}}</h3></p>
+<h3>{{price}}</h3>
 <p>{{delivery}}</p>
 
-<div class="col-4">
+<div>
     {{#each buttons}}
         <a href="{{link}}" class="btn
         {{#if isPrimary}}btn-primary{{/if}} 
@@ -180,20 +168,19 @@
     {{/each}}
 </div>
 
-
-<div class="col-4">
-    <ol>{{#each characteristics}}</ol>
+<div>
+    <ol>
+    {{#each characteristics}}
     <li>{{title}} {{value}}</li>
-  
-</div>
-
-{{/each}}
-
+    {{/each}}
+    </ol>
+    </div>
+    </div>
 {{/each}} 
 
 </div>
 </div>
-
+</div>
 <hr>
 
 <div class="card mt-5 mb-5">
