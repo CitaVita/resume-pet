@@ -1,0 +1,79 @@
+<div class="col-8">
+    <div class="row">
+
+         {{#each goodsList}}
+        <div class="card col-6">
+           <img class="card-img-top" src="{{img}}" alt="photos">
+           
+
+            <div class="card-title">
+                {{#if isHot}}
+                <snap class="badge text-bg-warning rounded-pill text-uppercase">Hot</snap>
+                {{/if}}
+             
+                {{#if isNew}}
+                <snap class="badge text-bg-primary rounded-pill text-uppercase">New</snap>
+                {{/if}}
+            
+                {{#if isFast}}
+                <snap class="badge text-bg-warning rounded-pill text-uppercase">Fast</snap>
+                {{/if}}
+           
+                {{#if isFree}}
+                <snap class="badge text-bg-primary rounded-pill text-uppercase">free</snap>
+                {{/if}}
+            </div>
+          
+              
+
+<div class="mt-3 mb-3">
+
+    <h5>{{name}}</h5>
+
+    {{#with review}}
+        <p>{{amount}}</p>
+         <p>{{text}}</p>
+    {{/with}}
+</div>
+
+<h3>{{price}}</h3>
+<p>{{delivery}}</p>
+
+<div>
+    {{#each buttons}}
+        <a href="{{link}}" class="btn
+        {{#if isPrimary}}btn-primary{{/if}} 
+        {{#if isSecondary}}btn-secondary{{/if}}
+        ">{{text}}</a>
+    {{/each}}
+</div>
+
+<div>
+    <ol>
+    {{#each characteristics}}
+    <li>{{title}} {{value}}</li>
+    {{/each}}
+    </ol>
+    </div>
+    </div>
+{{/each}} 
+
+</div>
+</div>
+</div>
+<hr>
+
+<div class="card mt-5 mb-5">
+    <div class="card text-bg-success">
+        {{#with service}}
+             <div class="card-title text-center">
+                 <h3>{{title}}</h3>
+                    <p>{{description}}</p>
+                    {{#each buttons}}
+                    <a href="{{link}}" class="btn btn-primary">{{text}}</a>
+                     {{/each}}
+             </div>
+        {{/with}}
+    </div>
+</div>
+
