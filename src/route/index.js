@@ -3000,7 +3000,6 @@ router.get('/', function (req, res) {
         "shophome",
         "shoporder",
         "shoprewiev",
-        "shopprofile",
         "shopcatalog",
         "shopcart",
       ]
